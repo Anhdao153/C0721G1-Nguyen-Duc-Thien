@@ -1,0 +1,6 @@
+//điểm trung bình
+begin
+	input Math, Physics, Chemistry
+	Average = (Math + Physics + Chemistry) / 3
+	Output Average
+end

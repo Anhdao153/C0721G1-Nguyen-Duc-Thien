@@ -1,0 +1,7 @@
+//Chuyển đổi tiền tệ từ VND sang $
+Begin
+	Output: "nhap so tien muon doi"
+	Input A
+	A=A*23000
+	Output: "so tien muon doi la A"
+End

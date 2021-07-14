@@ -1,0 +1,17 @@
+begin 
+	output :"nhap so học sinh cần phải xếp loại
+	input A
+	for(i=0;i++;i<A)
+	input B
+	
+	C=B
+	if(C>=75)
+		Output: Loại giỏi
+	else If(60<=C)
+		Output: Loại khá
+	else If(45<=C)
+		Output: Loại C
+	else If (35<=c)
+		Output: Loại D
+	else 
+		Output: thi lại
