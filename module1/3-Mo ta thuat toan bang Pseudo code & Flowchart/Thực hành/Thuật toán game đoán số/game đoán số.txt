@@ -1,0 +1,22 @@
+begin 
+ main 1{
+	Input random N 0-9
+	input M
+	If(m==N)
+		Output Đúng
+		Output Press 0 to play again
+		Input A
+			If (A==0)
+			Main 1
+			Else 
+			End;
+	Else
+		Out put sai
+		Output press 0 to play again
+		input A
+			If (A==0)
+			Main 1
+			Else 
+			End;
+}
+End;
