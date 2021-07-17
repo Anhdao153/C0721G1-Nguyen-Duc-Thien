@@ -1,0 +1,36 @@
+.heading1{
+    width: 450px;
+    height: 100px;
+    padding-left: 10%;
+}
+.age{
+    width: 500px;
+    height: 70px;
+}
+.income{
+    width: 500px;
+    height: 70px;
+}
+.gender{
+    width: 500px;
+    height: 130px;
+}
+.product{
+    width: 1000px;
+    height: 100px;
+}
+.time{
+    width: 500px;
+    height: 100px;
+}
+.money{
+    width: 500px;
+    height: 50px;
+}
+.review{
+    width: 700px;
+
+}
+select{
+    width: 500px;
+}

@@ -1,0 +1,12 @@
+.background{
+    width: 700px;
+    height: 700px;
+    background: orange;
+}
+.table{
+    width: 500px;
+    height: 500px;
+    float: left;
+    margin: 100px;
+}
+

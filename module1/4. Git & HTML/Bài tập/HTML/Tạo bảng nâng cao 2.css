@@ -1,0 +1,9 @@
+table{
+    font-family: SansSerif;
+    border-collapse: collapse;
+    width: 50%;
+}
+th, td{
+    text-align: center;
+    padding-left: 4px;
+}

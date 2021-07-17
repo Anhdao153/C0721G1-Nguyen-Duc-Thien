@@ -5,58 +5,97 @@
     <title>Codegym.VN</title>
     <style>
         .container {
-            width: 500px;
+            width: 600px;
             height: 300px;
+            margin: auto;
+            background-color: #f2fff3;
         }
+
         .element {
-            width: 100%;
+            width: 95%;
             float: left;
+            padding-top: 2px;
         }
+
         span {
             width: 30%;
             float: left;
             margin-left: 2%;
         }
+
         .sub {
-            width: 60%;
+            width: 30%;
             margin-left: 2%;
             float: left;
             margin-top: 1%;
         }
+
+        .chu {
+            padding-left: 4%;
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        .heading {
+            width: 590px;
+
+            text-align: center;
+        }
+        .nut{
+            padding-left: 35%;
+        }
+
+
     </style>
 </head>
 <body>
-<div class="heading">
-    <p><H1><span style="color:red">Sở thích của bạn</span></H1>
-</div>
+
 <div class="container">
-    <form action="Tạo%20Form%20cơ%20bản.html">
-        <div class="element" >
-            <span style="color: blue">Họ và tên</span>
-            <input class="sub" type="text" name="yourname">
-        </div>
-        <div class="element">
-            <span style="color: blue">Email</span>
-            <input class="sub" type="email" name="Email">
-        </div>
-        <div class="element">
-            <span style="color: blue">Sở thích</span>
-            <div class="sub">
-                <input type="checkbox" name="hobby" value="thethao">thể thao
-                <input type="checkbox" name="hobby" value="thethao">thể thao
-                <input type="checkbox" name="hobby" value="thethao">thể thao
-                <input type="checkbox" name="hobby" value="thethao">thể thao
-                <input type="checkbox" name="hobby" value="thethao">thể thao
-                <input type="checkbox" name="hobby" value="thethao">thể thao
-                <input type="checkbox" name="hobby" value="thethao">thể thao
+    <div class="conainer1">
 
 
+        <div class="heading" style="border: 10px solid yellow ">
+            <table>
+            <th>
+            <H1><span class="heading" style="color:red">Sở thích của bạn</span></H1>
+            </th></table>
+        </div>
+
+        <form action="Tạo%20Form%20cơ%20bản.html">
+            <div class="element" style="border: 20px solid red">
+                <table>
+                    <th><span class="chu" style="color: blue">Họ và tên</span>
+                        <input class="sub" type="text" name="yourname">
+                        <div class="element">
+                            <span class="chu" style=" color: blue">Email</span>
+                            <input class="sub" type="email" name="Email">
+                        </div>
+                        <div class="element">
+                            <span class="chu" style=" color: blue">Sở thích</span>
+                            <div class="sub">
+                                <input type="checkbox" name="hobby" value="thethao">thể thao
+                                <input type="checkbox" name="hobby" value="thethao">thể thao
+                                <input type="checkbox" name="hobby" value="thethao">thể thao
+                                <input type="checkbox" name="hobby" value="thethao">thể thao
+                                <input type="checkbox" name="hobby" value="thethao">thể thao
+                                <input type="checkbox" name="hobby" value="thethao">thể thao
+                                <input type="checkbox" name="hobby" value="thethao">thể thao
+
+
+                            </div>
+                        </div>
+                    </th>
+                </table>
+                <br>
+                <div class="nut">
+                <input type="submit" value="nhập lại">
+                <input type="reset" value="Gửi thông tin">
+                </div>
             </div>
-            <input type="submit" value="nhập lại">
-            <input type="reset" value="Gửi thông tin">
-        </div>
 
-    </form>
+
+        </form>
+    </div>
 </div>
 
 </body>

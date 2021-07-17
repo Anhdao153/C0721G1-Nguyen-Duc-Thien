@@ -1,45 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Đăng ký học viên</title>
     <style>
         .body {
-            width: ;
+            width: 600px;
+            height: 300px;
+            background-color: #fff097;
 
         }
+        .full{
+            width: 90%;
+            height: 60%;
+            float: left;
+            padding-top: 1px;
+        }
+        .chucc{
+            width: 20%;
+            height: 2px;
+            float: left;
+            margin-bottom: 3%;
+
+        }
+        .Head{
+            width: 600;
+            height: 50px;
+            background: aquamarine;
+        }
+
 
 
     </style>
 </head>
 <body>
 <div class="body">
-        <H3>Đăng ký học viên</H3>
-    <div class="button">
-        <span style="color:blue"> họ và tên</span>
-        <input type="text" name="hovaten" placeholder="Họ và Tên"> <br>
-        <span style="color: blue">Ngày Sinh</span>
-        <input type="date" name="ngaythang" placeholder="DD/MM/YYYY"><br>
-        <span style="color: #373cff">Giới tính</span>
-        <input type="radio" name="gioitinh" value="nam">Nam
-        <input type="radio" name="gioitinh" value="nu">Nu<br>
-        <span style="color: blue">địa chỉ</span>
-        <input type="text" name="diachi"><br>
-        <span style="color: blue">lớp</span>
-        <select name="lop">
+    <div class="borHead">
+
+    </div>
+    <H1><span class="Head" style="color: #373cff">Đăng ký học viên</span></H1>
+    <div class="full">
+        <span class="chucc" style="color:blue"> Họ và tên</span>
+        <input  type="text" name="hovaten" placeholder="Họ và Tên"></input><br>
+        <span class="chucc" style="color: blue">Ngày Sinh</span>
+        <input  type="date" name="ngaythang" placeholder="DD/MM/YYYY"></input><br>
+        <span class="chucc" style="color: #373cff">Giới tính</span>
+        <input  type="radio" name="gioitinh" value="nam"></input>Nam
+        <input type="radio" name="gioitinh" value="nu"></input>Nu<br>
+        <span class="chucc" style="color: blue">địa chỉ</span>
+        <textarea  type="text" name="diachi"></textarea><br>
+        <span class="chucc" style="color: blue">lớp</span>
+        <select  name="lop">
             <option value="Class A">-Chọn lớp-</option>
             <option value="Class B">Lớp B</option>
             <option value="Class C">Lớp C</option>
             <option value="Class D">Lớp D</option>
             <option value="Class E">Lớp E</option>
         </select><br>
-        <span style="color: blue">Email</span>
-        <input type="email" name="Email"><br>
-        <span style="color: blue">Số điện thoại</span>
-        <input type="number" name="sodienthoai">
+<span class="chucc" style="color: blue">Email</span>
+<input class="button" type="email" name="Email"><br>
+<span class="chucc" style="color: blue">Số điện thoại</span>
+<input class="button" type="number" name="sodienthoai"><br>
+        <input class="phim" type="submit" name="submit">
+        <input class="phim" type="reset" name="reset">
     </div>
-    <input type="submit" name="submit">
-    <input type="reset" name="reset">
+
+</div>
 </div>
 </body>
 </html>
