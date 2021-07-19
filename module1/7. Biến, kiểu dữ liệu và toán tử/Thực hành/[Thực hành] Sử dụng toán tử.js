@@ -1,0 +1,12 @@
+let nhapheight;
+let nhapwidth;
+nhapheight = prompt(nhapheight);
+document.write('hãy nhập số chiều cao của hình chữ nhật  ' + nhapheight);
+document.write("<br>");
+nhapwidth = prompt(nhapwidth);
+document.write('hãy nhập số chiều rộng của hình chữ nhật  ' + nhapwidth);
+document.write("<br>");
+let chieucao = parseInt(nhapheight);
+let chieurong = parseInt(nhapwidth);
+let Squad = nhapheight * nhapwidth;
+document.write('Diện tích của hình chữ nhật là:  ' + Squad);

@@ -1,0 +1,36 @@
+document.write('nhập số điện cho sinh viên<br>');
+document.write('Môn vật lý<br>');
+let vatly;
+let nhapvatly = parseFloat(prompt("nhập điểm môn lý", vatly));
+document.write('điểm vật lý:' + nhapvatly);
+let hoahoc;
+document.write('<br>Môn hóa học');
+let nhaphoahoc =parseFloat(prompt("nhập điểm môn hóa", hoahoc));
+document.write('<br>điểm môn hóa học: ' + nhaphoahoc);
+let sinhhoc;
+document.write('<br>Môn sinh học');
+let nhapsinhhoc =parseFloat(prompt("nhập điểm môn sinh", sinhhoc));
+document.write('<br>Điểm môn sinh học: ' + nhapsinhhoc);
+
+let diemtrungbinh = (nhapvatly+nhaphoahoc+nhapsinhhoc)/3;
+document.write('<br>điểm trung bình của bạn là: ' + diemtrungbinh);
+document.write('<br><br><br><br><br>');
+document.write('Chuyển đổi độ C thành độ F');
+let C;
+let doC = parseFloat(prompt("Nhập độ C cần đổi", C));
+document.write('<br>Độ C bạn muốn đổi là:' + doC);
+let F=(doC/5)*9+32;
+document.write('<br>Độ F được đổi là:' + F);
+
+document.write('<br><br><br><br><br>');
+let r;
+let bkr = parseFloat(prompt("Bán kính đường tròn", r));
+document.write('<br>Diện tích hình tròn có bán Kính: ' + bkr);
+let s=(bkr*bkr*3.14);
+document.write('<br>Diện tích hình tròn là:' + s);
+document.write('<br><br><br><br><br>');
+let c;
+let cvt = parseFloat(prompt("Bán kính đường tròn", c));
+document.write('<br>Diện tích hình tròn có bán Kính: ' + cvt);
+let cv=(cvt*2*3.14);
+document.write('<br>Diện tích hình tròn là:' + cv);

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Ứng dụng chuyển đổi tiền tệ</title>
+    <script src="[Bài tập] Ứng dụng chuyển đổi tiền tệ.js"></script>
+
+</head>
+<body>
+<div class="amount">
+    <h3>Amount</h3>
+    <input id="nhaptien" type="number" name="money">
+</div>
+<div class="fromcurrent">
+    <h3>Fromcurrent</h3>
+    <select id="tigia">
+        <option value="23000">Việt Nam</option>
+        <option value="110">Nhật Bản</option>
+        <option value="1145">Hàn Quốc</option>
+        <option value="1">Mỹ</option>
+        <option value="6.5">Trung</option>
+    </select>
+</div>
+<div class="tocurrent">
+    <h3>tocurrent</h3>
+    <select id="tile">
+        <option value="1">Mỹ</option>
+        <option value="110">Nhật Bản</option>
+        <option value="1145">Hàn Quốc</option>
+        <option value="6.5">Trung</option>
+        <option value="23000">Việt Nam</option>
+    </select>
+</div>
+<div class="button">
+    <button id="button" type="button" name="nut" value="Convert" onclick="amountjs()">Convert</button>
+</div>
+<div >
+    <p id="totalmoney">money</p>
+    <sup>$</sup><span id="change">0.00</span>
+    <small id="each">each</small>
+</div>
+</body>
+<link rel="stylesheet" href="[Bài tập] Ứng dụng chuyển đổi tiền tệ.css">
+</html>

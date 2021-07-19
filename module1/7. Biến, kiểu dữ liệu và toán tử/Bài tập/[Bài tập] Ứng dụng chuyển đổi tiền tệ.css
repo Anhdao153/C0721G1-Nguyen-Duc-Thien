@@ -1,0 +1,16 @@
+.amount{
+    width: 200px;
+    height: 80px;
+    float: left;
+}
+.fromcurrent{
+    width: 150px;
+    float: left;
+}
+.tocurrent{
+    width: 100px;
+    float: left;
+}
+.button{
+    padding-top: 60px;
+}
