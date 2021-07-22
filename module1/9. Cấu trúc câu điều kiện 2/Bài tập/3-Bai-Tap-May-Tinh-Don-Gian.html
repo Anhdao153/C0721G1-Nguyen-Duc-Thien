@@ -8,28 +8,38 @@
 </head>
 <body>
 <div class="calculator">
-    <input type="number" name="ketqua"> <br>
-    <div class="nut">
-        <button type="button" name="nut" value="phimao" style="color: #373cff">1</button>
-        <button type="button" name="nut" value="phimao" style="color: #373cff">2</button>
-        <button type="button" name="nut" value="phimao" style="color: #373cff">3</button>
-        <button type="button" name="nut" value="phimao" style="color: #373cff">+</button>
+    <label id="onhap" class="onhap"></label>
+    <br>
+    <div class="number">
+        <button  class="nut" id="so1" type="button" name="nut" value="1" style="color: #373cff">1</button>
+        <button  class="nut" id="so2" type="button" name="nut" value="2" style="color: #373cff">2</button>
+        <button  class="nut" id="so3" type="button" name="nut" value="3" style="color: #373cff">3</button>
+        <button  class="nut" id="daucong" type="button" name="nut" value="+" style="color: #373cff">+</button>
         <br>
-        <button type="button" name="nut" value="phimao" style="color: #373cff">4</button>
-        <button type="button" name="nut" value="phimao" style="color: #373cff">5</button>
-        <button type="button" name="nut" value="phimao" style="color: #373cff">6</button>
-        <button type="button" name="nut" value="phimao" style="color: #373cff">+</button>
+        <button  class="nut" id="so4" type="button" name="nut" value="4" style="color: #373cff">4</button>
+        <button  class="nut" id="so5" type="button" name="nut" value="5" style="color: #373cff">5</button>
+        <button  class="nut" id="so6" type="button" name="nut" value="6" style="color: #373cff">6</button>
+        <button  class="nut" id="dautru" type="button" name="nut" value="-" style="color: #373cff">-</button>
         <br>
-        <button type="button" name="nut" value="phimao" style="color: #373cff">7</button>
-        <button type="button" name="nut" value="phimao" style="color: #373cff">8</button>
-        <button type="button" name="nut" value="phimao" style="color: #373cff">9</button>
-        <button type="button" name="nut" value="phimao" style="color: #373cff">*</button>
+        <button  class="nut" id="so7" type="button" name="nut" value="7" style="color: #373cff">7</button>
+        <button  class="nut" id="so8" type="button" name="nut" value="8" style="color: #373cff">8</button>
+        <button  class="nut" id="so9" type="button" name="nut" value="9" style="color: #373cff">9</button>
+        <button  class="nut" id="daunhan" type="button" name="nut" value="*" style="color: #373cff">*</button>
         <br>
-        <button type="reset" name="nut" value="phimao" style="color: #373cff">C</button>
-        <button type="reset" name="nut" value="phimao" style="color: #373cff">0</button>
-        <button type="reset" name="nut" value="phimao" style="color: #373cff">=</button>
-        <button type="reset" name="nut" value="phimao" style="color: #373cff">/</button>
+        <button  class="nut" type="reset" name="nut" value="C" style="color: #373cff">C</button>
+        <button  class="nut" type="button" name="nut" value="0" style="color: #373cff">0</button>
+        <button  class="nut" type="button" name="nut" value="=" style="color: #373cff">=</button>
+        <button  class="nut" id="dauchia" type="button" name="nut" value="/" style="color: #373cff">/</button>
     </div>
+    <script>const numbers = document.getElementsByClassName('nut');
+    const result = document.getElementById("onhap");
+
+    for (let number of numbers){
+        number.addEventListener('click', function(){
+
+            result.innerHTML += this.value
+        });
+    }</script>
 </div>
 </body>
 </html>
