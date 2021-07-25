@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inbangcuuchuong</title>
+</head>
+<body>
+<script>
+document.write("<table border='1'>");
+    for (i = 2; i <= 9; i++) {
+        document.write("<tr>");
+        for (j = 1; j <= 9; j++) {
+            let x = i * j;
+            document.write('<td>');
+            document.write(+i + '*' + j + '=' + x +' ');
+
+        }
+        document.write('</td>');
+        document.write("</tr>");
+
+
+    }
+document.write('</table>')
+</script>
+
+</body>
+
+</html>

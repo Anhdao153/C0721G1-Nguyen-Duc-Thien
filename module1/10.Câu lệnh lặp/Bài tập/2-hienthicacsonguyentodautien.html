@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hienthicacsonguyento</title>
+</head>
+<body>
+<input onmouseleave="main()" type="number" id="snt">
+<script>
+
+let t=true;
+
+    function ktsnt(snt) {
+        if (snt < 2) {
+            return false;
+        }
+        let Q = Math.sqrt(snt);
+        for (i = 2; i <= Q; i++) {
+            if (snt % i == 0) {
+                return false;
+            }
+        }
+        return t;
+    }
+
+    function main() {
+        var snt = parseInt(document.getElementById('snt').value);
+        console.log('hello');
+        console.log(+snt);
+        var run = 0;
+        let i = 2;
+        while (run < snt) {
+
+            if (ktsnt(i)) {
+                document.write(+i+' ');
+                run++;
+            }
+            i++;
+        }
+    }
+</script>
+</body>
+</html>
