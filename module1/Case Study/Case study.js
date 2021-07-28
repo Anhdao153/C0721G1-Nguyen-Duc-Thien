@@ -12,6 +12,7 @@
 //
 //
 // }
+
 //bài 4 vẽ tam giác cân rỗng ruột
 // let h = 10;
 // for (i = 10; i >= 1; i--) { //in hàng dọc vị trí ngang
@@ -24,6 +25,7 @@
 //     }
 //     document.write("<br>");
 // }
+
 //bài 5 câu điều kiện if else|| switch case
 // let n=prompt('nhập số lương của nhân viên vào');
 // let luong;
@@ -49,3 +51,22 @@
 // {
 //     alert('yêu cầu bạn phải nhập lại, vì bạn nhập phụ âm');
 // }
+
+//III//MANG
+//bài 1:
+// let a=prompt('nhập độ dài mảng');
+// let arr1=[];
+// let arr=[];
+// let b=0;
+// for (i=0;i<a;i++) {
+//     arr[i] = parseInt(prompt('nhập giá trị cho mảng'));
+// }
+//         for (j=0;j<a;j++){
+//            b=b+arr[j];
+//
+//         arr1[j]=b;
+//             console.log(arr1);
+//         }
+//
+
+//bài 2
