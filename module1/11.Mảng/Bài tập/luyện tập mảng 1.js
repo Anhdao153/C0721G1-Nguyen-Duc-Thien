@@ -1,28 +1,26 @@
-// Bài 1
-// let a=prompt('nhập độ dài mảng số nguyên để so sánh với 10');
-// let songuyen=[a];
-// let b=0;
-// for (i=0;i<a;i++){
-//     songuyen[i]= prompt('nhập số')
+// // Bài 1
+// let a = prompt('nhập độ dài mảng số nguyên để so sánh với 10');
+// let songuyen = [a];
+// let b = 0;
+// for (i = 0; i < a; i++) {
+//     songuyen[i] = prompt('nhập số')
 // }
-// for (i=0;i<a;i++){
+// for (i = 0; i < a; i++) {
 //
-// if (songuyen[i]>=10){
-//     document.write(songuyen[i]+' ');
-//     b=b+1;
-// } else {
-//     alert('không có số nguyên nào lớn bằng 10 cả');
-//     break;
+//     if (songuyen[i] >= 10) {
+//         document.write(songuyen[i] + ' ');
+//         b = b + 1;
+//     }
 // }
-// } document.write('<br>có '+b+" số nguyên hơn hơn 10 trong mảng");
+// document.write('<br>có ' + b + " số nguyên hơn hơn 10 trong mảng");
 
-//bài 2
-// let a = (prompt('nhập độ dài của mảng để so sánh với nhau');
+// bài 2
+// let a = prompt('nhập độ dài của mảng để so sánh với nhau');
 // let songuyen = [a];
 // let b = 0;
 // let c = 0;
 // for (i = 0; i < a; i++) {
-//     songuyen[i] = praseInt(prompt('nhập số vào mảng'));
+//     songuyen[i] = parseInt(prompt('nhập số vào mảng'));
 // }
 // for (i = 0; i < a; i++) {
 //     if (songuyen[i] > b) {
@@ -117,24 +115,24 @@
 // document.write(songuyenam);
 
 //bài 8
-// let a=prompt('nhập độ dài mảng số nguyên');
-// let songuyen=[];
-// let b=0;
-// for (i=0;i<a;i++){
-//     songuyen[i]= parseInt(prompt("nhập giá trị"));
-// }
-// for (i=0;i<a;i++){
-//     if (songuyen[i]>songuyen[i+1]){
-//         b=songuyen[i];
-//         songuyen[i]=songuyen[i+1];
-//         songuyen[i+1]=b;
-//         console.log('đây là giá trị của b '+b);
-//         console.log('đây là rap việt '+songuyen[i]);
-//         console.log('đây là 7 viên ngọc rồng '+songuyen[i+1]);
-//     }
-//
-//     document.write(' số '+songuyen[i]);
-// }
+let a=prompt('nhập độ dài mảng số nguyên');
+let songuyen=[];
+let b=0;
+for (i=0;i<a;i++){
+    songuyen[i]= parseInt(prompt("nhập giá trị"));
+}
+for (i=0;i<a;i++){
+    if (songuyen[i]>songuyen[i+1]){
+        b=songuyen[i];
+        songuyen[i]=songuyen[i+1];
+        songuyen[i+1]=b;
+        console.log('đây là giá trị của b '+b);
+        console.log('đây là rap việt '+songuyen[i]);
+        console.log('đây là 7 viên ngọc rồng '+songuyen[i+1]);
+    }
+
+    document.write(' số '+songuyen[i]);
+}
 
 // //bài 9
 // let a = prompt('nhập độ dài mảng số nguyên âm');

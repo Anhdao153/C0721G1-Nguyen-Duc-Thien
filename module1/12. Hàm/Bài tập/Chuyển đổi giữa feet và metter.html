@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi giữa feet và metter</title>
+</head>
+<body>
+<input type="number" id="deohieu">
+<button type="button" onclick="metter()">chuyển sang Feet</button>
+<button type="button" onclick="foot()">chuyển sang metter</button>
+<script>
+    function metter(m) {
+        f = document.getElementById('deohieu').value;
+        m = 0.305 * f;
+        document.write(m + ' metter');
+        return m;
+    }
+
+    function foot(f) {
+        m = document.getElementById('deohieu').value;
+        f = 3.279 * m;
+        document.write(f + ' feet');
+        return f;
+    }
+</script>
+</body>
+</html>

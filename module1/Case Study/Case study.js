@@ -70,3 +70,10 @@
 //
 
 //bài 2
+let arr1=[7,2,5,3,5,3];
+let arr=[7,2,5,4,6,3,5,3];
+for (i=0;i<arr1.length;i++);{
+    if (arr1[i]!=arr[i]){
+        document.write(arr1[i]);
+    }
+}
