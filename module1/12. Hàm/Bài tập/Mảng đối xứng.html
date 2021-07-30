@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mảng đối xứng</title>
+</head>
+<body>
+<script>
+    let a = prompt('nhập độ dài của mảng');
+    let arr = [];
+    for (i = 0; i < a; i++) {
+        arr[i] = prompt('nhập giá trị vào cho mảng');
+    }
+    check();
+    main();
+
+    function check(arr, a) {
+        for (i = 0; i < a / 2; i++) {
+            if (arr[i] != arr[a - 1 - i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function main() {
+        if (check(arr, a)) {
+            alert('mảng đối xứng');
+        } else {
+            alert('mảng không đối xứng')
+        }
+    }
+</script>
+</body>
+</html>
