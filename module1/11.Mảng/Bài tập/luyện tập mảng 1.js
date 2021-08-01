@@ -1,4 +1,4 @@
-// // Bài 1
+// Bài 1
 // let a = prompt('nhập độ dài mảng số nguyên để so sánh với 10');
 // let songuyen = [a];
 // let b = 0;
@@ -59,12 +59,13 @@
 // for (i = 0; i < a; i++) {
 //     songuyen[i] = parseInt(prompt("nhập giá trị"));
 // }
-// for (i =0; i < a; i++) {
+// for (i =0; i < a%2; i++) {
 //     c = songuyen[i];
 //     songuyen[i] = songuyen[a-1-i];
 //     songuyen[a-1-i] = c;
-//     document.write(' số ' + songuyen[i]);
+//
 // }
+// document.write(' số ' + songuyen);
 
 // //bai5
 // let a = prompt('nhập độ dài mảng số nguyên');
@@ -74,8 +75,12 @@
 // for (i = 0; i < a; i++) {
 //     songuyenam[i] = parseInt(prompt("nhập giá trị"));
 // }
-// for (i=0;i<a;i++){
-//     document.write('in số nguyên âm '+songuyenam[i]);
+// for (i = 0; i < a; i++) {
+//     if (songuyenam[i] < 0) {
+//         document.write('in số nguyên âm ' + songuyenam[i]);
+//     } else {
+//         document.write('in số nguyên dương ' + songuyenam[i]);
+//     }
 // }
 
 // // /bài 6
@@ -115,24 +120,24 @@
 // document.write(songuyenam);
 
 //bài 8
-let a=prompt('nhập độ dài mảng số nguyên');
-let songuyen=[];
-let b=0;
-for (i=0;i<a;i++){
-    songuyen[i]= parseInt(prompt("nhập giá trị"));
-}
-for (i=0;i<a;i++){
-    if (songuyen[i]>songuyen[i+1]){
-        b=songuyen[i];
-        songuyen[i]=songuyen[i+1];
-        songuyen[i+1]=b;
-        console.log('đây là giá trị của b '+b);
-        console.log('đây là rap việt '+songuyen[i]);
-        console.log('đây là 7 viên ngọc rồng '+songuyen[i+1]);
-    }
-
-    document.write(' số '+songuyen[i]);
-}
+// let a = prompt('nhập độ dài mảng số nguyên');
+// let songuyen = [];
+// let b = 0;
+// let c = 0;
+// for (i = 0; i < a; i++) {
+//     songuyen[i] = parseInt(prompt("nhập giá trị"));
+// }
+// for (i = 0; i < a; i++) {
+//     for (j = 0; j <= i; j++) {
+//         if (songuyen[j] < songuyen[i]) {
+//             b = songuyen[i];
+//             songuyen[i] = songuyen[j];
+//             songuyen[j] = b;
+//         }
+//     }
+//
+// }
+// document.write(' số ' + songuyen);
 
 // //bài 9
 // let a = prompt('nhập độ dài mảng số nguyên âm');

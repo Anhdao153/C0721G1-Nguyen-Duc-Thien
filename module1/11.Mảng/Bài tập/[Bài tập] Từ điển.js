@@ -2,8 +2,7 @@ let tienganh = ["chair", "man", "woman", "boy", "girl", "remote", "phone", "mous
 let tiengviet = ["ghế", "đàn ông", "phụ nữ", "con trai", "con gái","điều khiển", "chuột", "điện thoại", "laptop", "đàn guitar"];
 let b=prompt('nhập số từ mà bạn muốn kiểm tra, từ 1-10');
 let check=true;
-for (i = 0; i <= tiengviet.length; i++) {
-
+for (i = 0; i < tiengviet.length; i++) {
     console.log(tienganh[i]);
      if (tiengviet[i]===b){
          check=false;

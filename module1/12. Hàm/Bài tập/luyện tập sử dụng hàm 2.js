@@ -33,20 +33,20 @@
 // main(b);
 
 // //bài 4
-// function main (a){
-//     if (a-a==0){
-//
-//         a=true;
-//         alert('ký tự bạn nhập là một số '+a);
-//     } else {
-//         a= false;
-//         alert('ký tự bạn nhập không phải là một số '+a);
-//
-//     }
-//     return a;
-// }
-// let b=parseInt(prompt('nhập ký tự để kiểm tra xem nó có phải là số không '));
-// main(b);
+function main (a){
+    if (a-a==0){
+
+        a=true;
+        alert('ký tự bạn nhập là một số '+a);
+    } else {
+        a= false;
+        alert('ký tự bạn nhập không phải là một số '+a);
+
+    }
+    return a;
+}
+let b=parseInt(prompt('nhập ký tự để kiểm tra xem nó có phải là số không '));
+main(b);
 
 //bài 5
 // function main(a, s, f) {
