@@ -70,10 +70,52 @@
 //
 
 //bài 2
-let arr1=[7,2,5,3,5,3];
-let arr=[7,2,5,4,6,3,5,3];
-for (i=0;i<arr1.length;i++);{
-    if (arr1[i]!=arr[i]){
-        document.write(arr1[i]);
-    }
-}
+// let arr1=[7,2,5,3,5,3];
+// let arr=[7,2,5,4,6,3,5,3];
+// for (i=0;i<arr1.length;i++);{
+//     if (arr1[i]!=arr[i]){
+//         document.write(arr1[i]);
+//     }
+// }
+
+//bài 3 //CÓ VẤN ĐỀ RẤT LỚN.
+// let num=[];
+// let deno=[];
+// let d=0;
+// let e=0;
+// let f=0;
+// let a=prompt('nhập độ dài của mảng A');
+// let o=prompt('nhập độ dài của mảng B');
+// for (i=0;i<a;i++);{
+//     num[i]=prompt('nhập giá trị cho mảng A');
+//     console.log(i);
+// }
+// for (j=0;j<o;j++);{
+//     deno[j]=prompt('nhập giá trị cho mảng B');
+//     console.log(j);
+// }
+// for (u=0;u<a;u++){
+//     let c= num[u]/deno[u];
+//     if(c>d){
+//         d=c;
+//         e=num[u];
+//         f=deno[u];
+//     }
+// }
+// d=d-parseInt(d);
+// alert('phân số lớn nhất là' +e+'/'+f);
+// alert('có chỉ số là' +d);
+
+//Bài 4
+// let b=0;
+// let so=[];
+// let chu=["một",'hai','ba','bốn','năm','sáu','bảy','tám','chín'];
+// let a=parseInt(prompt('nhập số lượng sô muốn nhập'));
+// for (i=0;i<a;i++){
+//     so[i]=parseInt(prompt('nhập một số bạn muốn'));
+//     b=so[i];
+//     document.write(chu[b-1]+' ');
+// }
+
+//bài 5
+
