@@ -117,5 +117,52 @@
 //     document.write(chu[b-1]+' ');
 // }
 
-//bài 5
+// //bài 5 //Sua loi sau
+// let beverage = ["Cafe", 'Cam vắt', 'Nước ép cà rốt', 'Nước ép cà chua', 'Nước lọc', 'Nước dừa'];
+//
+// function chonmon() {
+//     let a = parseInt(document.getElementById('nhapmon').value);
+//     let b = 0;
+//     let c = 0;
+//     switch (a) {
+//         case 1:
+//             b=parseInt(prompt('nhập số lượng bạn muốn order'));
+//              c=b*25;
+//             alert('bạn đã order '+b+' cf: '+c+'k');
+//         case 2:
+//             b=parseInt(prompt('nhập số lượng bạn muốn order'));
+//              c=b*35;
+//             alert('bạn đã order '+b+' Cam vắt:'+c+'k');
+//         case 3:
+//             b=parseInt(prompt('nhập số lượng bạn muốn order'));
+//              c=b*35;
+//             alert('bạn đã order '+b+' Nước ép cà rốt: '+c+'k');
+//         case 4:
+//             b=parseInt(prompt('nhập số lượng bạn muốn order'));
+//              c=b*30;
+//             alert('bạn đã order'+b+' Nước ép cà chua:'+c+'k');
+//         case 5:
+//             b=parseInt(prompt('nhập số lượng bạn muốn order'));
+//              c=b*15;
+//             alert('bạn đã order '+b+' Nước lọc:'+c+'k');
+//         case 6:
+//             b=parseInt(prompt('nhập số lượng bạn muốn order'));
+//              c=b*55;
+//             alert('bạn đã order '+b+' Nước dừa:'+c+'k');
+//         default:
+//             alert('không có món đó')
+//     }
+// }
 
+//IV//String
+//bai1
+let a=prompt('hãy nhập chuỗi mà bạn muốn');
+let chuoi=[];
+chuoi=a.split(" ");
+for (i=0;i<chuoi.length;i++){
+    if (chuoi[i]==" "){
+        chuoi[i]=" ";
+    }
+    chuoi[i].concat(chuoi[chuoi.length-i]);
+}
+alert(chuoi);
