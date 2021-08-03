@@ -2,12 +2,13 @@ let mydate = function (day, month, year) {
     this.day = day;
     this.month = month;
     this.year = year;
+
     this.getDay = function () {
         return this.day;
     };
     this.getMonth = function () {
         return this.month;
-    }
+    };
     this.getYear = function () {
         return this.year;
     };
@@ -34,4 +35,5 @@ alert(day + "/" + month + "/" + year);
 date.setDay(10);
 date.setMonth(10);
 date.setYear(2019);
+
 alert(day + "/" + month + "/" + year);

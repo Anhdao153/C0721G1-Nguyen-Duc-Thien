@@ -2,10 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>xây dựng lớp mô tả hình chữ nhật</title>
-    <script src="xây dựng lớp mô tả hình chữ nhật.js"></script>
+    <title>Title</title>
 </head>
 <body>
+<canvas id="myCanvas" width="500px" height="250"  ></canvas>
+<div>
+    <button type="button" onclick="change()">Thay đổi kích thước</button>
+    <p id="kq"></p>
+</div>
+<script>
+    // let Rectangle=function (x,y) {
+    //     this.dai=x;
+    //     this.rong=y;
+    //     this.getDai=function () {
+    //         return x;
+    //     };
+    //     this.setDai=function (x) {
+    //         this.dai=x;
+    //     }
+    //     this.getRong=function () {
+    //         return y;
+    //     };
+    //     this.setRong=function (y) {
+    //         this.rong=y;
+    //     }
+    //     this.dientich=function () {
+    //         return x*y;
+    //     }
+    //     this.chuvi=function () {
+    //         return (x+y)*2;
+    //     }
+    //     this.draw=function() {
+    //         let ctx=document.getElementById("myCanvas").getContext("2d");
+    //         ctx.fillStyle="#FF0000";
+    //         ctx.fillRect(0,0,this.getDai()*10,this.getRong()*10);
+    //     }
+    // }
+    // function change(){
+    //     a.setDai(parseInt(prompt("nhap chieu dai")));
+    //     a.setRong(parseInt(prompt("nhap chieu rộng")));
+    //     document.getElementById('kq').innerText="diện tích và chu vi của hình chữ nhật khi thay đổi: "+a.dientich()+", "+a.chuvi();
+    //     // document.write(a.draw());
+    // }
+    // let a=new Rectangle(parseInt(prompt("nhap chieu dai")),parseInt(prompt("nhap chieu rong")));
+    // console.log("diện tích và chu vi của hình chữ nhật: "+a.dientich()+", "+a.chuvi());
+    // a.draw();
+    // document.write(a.draw());
 
+    let Rectangle = function (x, y) {
+        this.dai = x;
+        this.rong = y;
+        this.getDai = function () {
+            return x;
+        };
+        this.setDai = function (x) {
+            this.dai = x;
+        };
+        this.getRong = function () {
+            return y;
+        };
+        this.setRong = function (y) {
+            this.rong = y;
+        };
+        this.dientich = function () {
+            return x * y;
+        };
+        this.chuvi = function () {
+            return (x + y) * 2;
+        };
+        this.chuvi = function () {
+            return (x + y) * 2;
+        };
+        this.draw = function () {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.fillStyle = "#fff9f8";
+            ctx.fillRect(0, 0, this.getDai() * 10, this.getRong() * 10);
+        }
+    };
+    function change() {
+        a.setDai(parseInt(prompt("nhap chieu dai")));
+        a.setRong(parseInt(prompt("nhap chieu rộng")));
+        document.getElementById('kq').innerText = "diện tích và chu vi của hình chữ nhật khi thay đổi: " + a.dientich() + ", " + a.chuvi();
+        // document.write(a.draw());
+    }
+
+    let a = new Rectangle(parseInt(prompt("nhap chieu dai")), parseInt(prompt("nhap chieu rong")));
+    console.log("diện tích và chu vi của hình chữ nhật: " + a.dientich() + ", " + a.chuvi());
+    a.draw();
+    document.write(a.draw());
+</script>
 </body>
 </html>
