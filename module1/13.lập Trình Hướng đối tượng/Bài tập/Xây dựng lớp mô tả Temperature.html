@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<button type="button" id="CtoF" onclick="change()">CtoF</button>
+<button type="button" id="FtoC" onclick="change2()">FtoC</button>
+<script>
+    let nhietdo = function (doC, doF) {
+        this.doC = doC;
+        this.doF = doF;
+        this.setC = function () {
+            return doC;
+        };
+        this.setF = function () {
+            return doF
+        };
+        this.getC=function () {
+            this.doC=doC;
+        };
+        this.getF=function () {
+            this.doF=doF;
+        };
+        this.CtoF=function () {
+            return doC*9/5+32;
+        };
+        this.FtoC=function () {
+            return doF*5/9+32;
+        };
+    };
+let a= new nhietdo(parseInt(prompt('nhập nhiệt độ C muốn đổi sang F')),parseInt(prompt('nhập nhiệt độ F muốn đổi sang C')));
+
+function change(){
+    alert('nhiệt độ sau khi chuyển c thành F là' +a.CtoF());
+};
+function change2() {
+    alert('nhiệt độ sau khi chuyển F thành C là' +a.FtoC());
+}
+
+</script>
+</body>
+</html>
