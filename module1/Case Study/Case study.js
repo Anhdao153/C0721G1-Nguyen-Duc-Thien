@@ -154,15 +154,104 @@
 //     }
 // }
 
-//IV//String
+//IV//String//lỗi mà k biết lỗi gì
 //bai1
-let a=prompt('hãy nhập chuỗi mà bạn muốn');
-let chuoi=[];
-chuoi=a.split(" ");
-for (i=0;i<chuoi.length;i++){
-    if (chuoi[i]==" "){
-        chuoi[i]=" ";
+// let a=prompt('hãy nhập chuỗi mà bạn muốn');
+// let chuoi=[];
+// let chuoi2=[];
+// chuoi=a.split(" ");
+// for (i=0;i<chuoi.length;i++){
+//     if (chuoi[i]=="  "){
+//         chuoi[i]="-";
+//         console.log('e')
+//     }
+//     chuoi2=chuoi2[i]+chuoi[i];
+//
+// }           /// làm cộng chuỗi thử xem.
+// alert(chuoi2);
+
+// Bài 2 //SỬA LỖI SAU
+// let a = prompt('hãy nhập chuỗi mà bạn muốn');
+// let chuoi = [];
+// let b = 0;
+// let mang=[];
+// chuoi = a.split('');
+// console.log(chuoi);
+// for (i = 0; i < chuoi.length; i++) {
+//     for (j = 0; j < chuoi.length; j++) {
+//         if (chuoi[i]!=chuoi[j]){
+//             b++;
+//             mang[i]=chuoi[j];
+//         } else{
+//             chuoi[i]='';
+//         }
+//     }
+//
+// }
+// console.log(mang+b);
+
+//V YÊU CẦU 5 (MẢNG 2 CHIỀU)
+//bài1
+// let a = parseInt(prompt('nhập chiều độ dài của mảng'));
+// let b = parseInt(prompt('nhập chiều độ rộng của mảng'));
+// let mang = [[]];
+// let c = 0;
+// for (i = 0; i < a; i++) {
+//     for (j = 0; j < b; j++) {
+//         mang[i[j]] = parseInt(prompt('nhập giá trị cho mảng'))
+//         console.log('giá trị tại vị trí ' + i + ' và ' + j + ' ' + mang[i[j]]);
+//         if (mang[i[j]] % 2 == 0) {
+//             c = c + mang[i[j]];
+//             console.log(mang[i[j]]);
+//         } else {
+//             console.log('giá trị tại vị trí ' + i + ' và ' + j + ' ' + mang[i[j]] + 'không chia hết cho 2');
+//         }
+//     }
+// }
+// alert(c);
+
+//bài 2
+// let a = prompt('nhập độ dài của mảng');
+// let b = prompt('nhập độ rộng của mảng');
+// let mang = [[]];
+// for (i = 0; i < a; i++) {
+//     for (j = 0; j < b; j++) {
+//         mang[i[j]] = parseInt(prompt('nhập số vào để kiểm xem có phải snt không'));
+//         if (mang[i[j]] % 2 == 0 || mang[i[j]] % 3 == 0 || mang[i[j]] % 5 == 0 || mang[i[j]] % 7 == 0) {
+//             console.log(mang[i[j]] +'không phải số nguyên tố');
+//         } else {
+//             console.log(mang[i[j]] + 'là số nguyên tố');
+//         }
+//     }
+//
+// }
+
+//bài3
+// let a = prompt('nhập độ dài của mảng');
+// let b = prompt('nhập độ rộng của mảng');
+// let mang = [[]];
+// let c=1000000;
+// let d=0;
+// for (i = 0; i < a; i++) {
+//     for (j = 0; j < b; j++) {
+//         mang[i[j]] = parseInt(prompt('nhập số vào để kiểm xem có phải snn không'));
+//         if (c>mang[i[j]]){
+//
+//             c=mang[i[j]];
+//         }
+//         if(d<mang[i[j]]){
+//             d=mang[i[j]];
+//         }
+//     }
+//
+// }
+// console.log('giá trị lớn nhất là '+d);
+// console.log('giá trị nhỏ nhất là '+c);
+
+//VI YÊU CẦU 6 OOP
+//BÀI SỔ XỐ;
+class Numberbuyer{
+    contrustor(ticket){
+        this.ticket=ticket;
     }
-    chuoi[i].concat(chuoi[chuoi.length-i]);
 }
-alert(chuoi);

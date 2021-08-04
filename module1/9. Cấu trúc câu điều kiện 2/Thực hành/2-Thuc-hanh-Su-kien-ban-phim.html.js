@@ -1,10 +1,10 @@
 var dichuyen = 10;
 
-document.addEventListener("keydown", main)
+document.addEventListener("keydown", main);
 
 function main(event) {
 
-    console.log(event.keyCode)
+    console.log(event.keyCode);
     switch (event.keyCode) {
         case 37:
             dichuyen = dichuyen + 10;
