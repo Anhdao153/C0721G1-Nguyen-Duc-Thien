@@ -5,20 +5,22 @@
     <title>Phát triển ứng dụng nhỏ mô phỏng câu chuyện Adam và Eva</title>
 </head>
 <body>
-<button type="button" id="antao" onclick="antao()">ăn táo</button>
-<button type="button" id="quataocon" onclick="quataocon()">kiểm tra quả táo và thông tin của người ăn</button>
+<!--<button type="button" id="antao" onclick="antao()">ăn táo</button>-->
+<!--<button type="button" id="quataocon" onclick="quataocon()">kiểm tra quả táo và thông tin của người ăn</button>-->
 <script>
     class Apple {
         constructor(gram) {
             this.gram = gram;
         }
     }
+
     class Human {
         constructor(name, sex, wei) {
             this.name = name;
             this.sex = sex;
             this.wei = wei;
         }
+
         eating(apple) {
             if (apple.gram > 0) {
                 this.wei++;
@@ -26,6 +28,7 @@
                 console.log('cân nặng hiện tại của ' + this.name + ' là ' + this.wei)
             }
         }
+
         checkapple(apple) {
             if (apple.gram > 0) {
                 console.log('quả táo hiện còn ' + apple.gram);
@@ -33,30 +36,27 @@
                 console.log('qwuar táo đã bị ăn sạch');
             }
         }
-        talking(){
-            alert(this.name+' nói rằng: ĐBRR')
+
+        talking() {
+            alert(this.name + ' nói rằng: ĐBRR')
         }
-        checkinfo(){
-            console.log('bạn người bạn đang kiểm tra là '+this.name+' '+this.sex+' '+this.wei);
+
+        checkinfo() {
+            console.log('bạn người bạn đang kiểm tra là ' + this.name + ' ' + this.sex + ' ' + this.wei);
         }
     }
+
     let apple = new Apple(100);
-    let adam=new Human("Adam","male",85);
-    let eva=new Human("Eva","female",65);
-
-    function antao() {
-              console.log(apple.gram);  
-      adam.eating();
-      adam.talking();
-      eva.eating();
-      eva.talking()
-    }
-    function quataocon() {
-        adam.checkapple();
-        adam.checkinfo();
-        eva.checkinfo();
-    }
-
+    let adam = new Human("Adam", "male", 85);
+    let eva = new Human("Eva", "female", 65);
+    console.log(apple.gram);
+    adam.eating(apple);
+    adam.talking();
+    eva.eating(apple);
+    eva.talking();
+    adam.checkapple(apple);
+    adam.checkinfo();
+    eva.checkinfo();
 
 
 </script>

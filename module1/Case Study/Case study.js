@@ -250,8 +250,4 @@
 
 //VI YÊU CẦU 6 OOP
 //BÀI SỔ XỐ;
-class Numberbuyer{
-    contrustor(ticket){
-        this.ticket=ticket;
-    }
-}
+

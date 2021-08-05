@@ -6,12 +6,80 @@
     <script src="Case study.js"></script>
 </head>
 <body>
-<p>1-cafe</p>
-<p>2-cam vắt</p>
-<p>3-nước ép cà rốt</p>
-<p>4-nước ép cà chua</p>
-<p>5-nước lọc</p>
-<p>6-nước dừa</p>
-<input type="number" onmouseleave="chonmon()" id="nhapmon">
+<!--<p>1-cafe</p>-->
+<!--<p>2-cam vắt</p>-->
+<!--<p>3-nước ép cà rốt</p>-->
+<!--<p>4-nước ép cà chua</p>-->
+<!--<p>5-nước lọc</p>-->
+<!--<p>6-nước dừa</p>-->
+<!--<input type="number" onmouseleave="chonmon()" id="nhapmon">-->
+<br>
+<br>
+<br>
+<br>
+<input type="number" id="so1">
+<input type="number" id="so2">
+<input type="number" id="so3">
+<input type="number" id="so4">
+<input type="number" id="so5">
+<input type="number" id="so6">
+<br>
+<button type="button" onclick="doketqua()">Dò kết quả</button>
 </body>
+<script>
+    //YÊU CẦU.6
+    class Soxo {
+        constructor() {
+            this.so =[];
+        }
+
+        random(){
+            console.log(Math.floor(Math.random() * 1000));
+          return Math.floor(Math.random() * 1000);
+
+        }
+
+        result() {
+            for (let i = 0; i < 6; i++) {
+                this.so[i] = this.random();
+            }
+            console.log(this.so);
+            return this.so;
+        }
+
+    }
+
+    let soxo = new Soxo();
+    let a = prompt('1.Bạn muốn tự chọn số - 2.Bạn muốn hệ thống random');
+    if (a == 1) {
+        alert('hãy nhập 6 số vào 6 ô input kia và nhấn nút dò số');
+        var e=[];
+        e[0] = document.getElementById("so1").value;
+        e[1] = document.getElementById("so2").value;
+        e[2] = document.getElementById("so3").value;
+        e[3] = document.getElementById("so4").value;
+        e[4] = document.getElementById("so5").value;
+        e[5] = document.getElementById("so6").value;
+        console.log(e);
+    } else {
+        var s = [6];
+        for (let i = 0; i < 6; i++) {
+            s[i] = soxo.random(s);
+            console.log(s+'cái qué gì đây')
+        }
+
+    }
+    console.log(s);
+    function doketqua() {
+        if (e==soxo.result()||s==soxo.result()){
+            alert('bạn đã đạt giải nhất');
+        } else if(e==soxo.result(1,2,3,4,5)||s==soxo.result(1,2,3,4,5)){
+            alert('bạn đã đạt giải nhì');
+        } else if (e==soxo.result(3,4,5)||s==soxo.result(3,4,5)){
+            alert('bạn đã đạt giải 3');
+        } else {
+            alert('bỏ đi mà làm người');
+        }
+    }
+</script>
 </html>
