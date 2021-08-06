@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô tả điện thoại</title>
+</head>
+<body>
+<script>
+    class Mobile{
+        constructor(pin,draft,inbox,outbox,status) {
+            this.pin=pin;
+            this.draft=draft;
+            this.inbox=inbox;
+            this.outbox=outbox;
+            this.status=status;
+        }
+        checkStatus(){
+            if(this.status){
+                document.write("điện thoại đang bậc");
+            }else {
+                document.write("điện thoại đang tắt");
+            }
+            this.pin--;
+        }
+        getStatus(){
+            this.status=status;
+            this.pin--;
+        }
+        setStatus(){
+            return this.status;
+            this.pin--;
+        }
+        switchMobile(){
+            this.status=!this.status;
+            this.pin--;
+        }
+        setChargePin(pin){
+            this.pin=pin;
+        }
+        setMessageDraft(message){
+            if (this.pin>0&&this.status){
+                this.draft.push(message);
+            }else {
+                document.write("do pin yếu hay máy tắt")
+            }
+            this.pin--;
+        }
+        sendMessage(adress,message){
+            if (this.pin>0&&this.status){
+                adress.inbox.push(message);
+                this.draft.push(message);
+            }else {
+                document.write("do pin yếu hay máy tắt")
+            }
+            this.pin--;
+        }
+        showMessage(){
+            if (this.pin>0&&this.status){
+                document.write(this.inbox.join(" "));
+            }else {
+                document.write("do pin yếu hay máy tắt")
+            }
+            this.pin--;
+        }
+        seenInbox(){
+            if (this.pin>0&&this.status){
+                document.write(this.draft.join(" "));
+            }else {
+                document.write("do pin yếu hay máy tắt")
+            }
+            this.pin--;
+        }
+    }
+    let nokia=new Mobile(20,[],[],[],true);
+    let iphone=new Mobile(35,[],[],[],true);
+    nokia.setMessageDraft("xin chào táo");
+    nokia.sendMessage(iphone,nokia.draft.pop());
+    iphone.showMessage();
+
+</script>
+</body>
+</html>
