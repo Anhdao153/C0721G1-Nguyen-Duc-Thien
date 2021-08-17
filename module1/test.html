@@ -8,24 +8,24 @@
 <div id="game"></div>
 </body>
 <script>
-//     let A=[1,3,5,0,5,7,8];
-//     let B=[];
-//     let D=[];
-//     let A1=[];
-//     let A2=[];
-//     let C=parseInt(prompt('nhập số N muốn nhập'));
-//     for (i=0;i<C;i++){
-//         B[i]=prompt('nhập số muốn nhập');
-//     }
-//     let K=parseInt(prompt('nhập nhập vị trí muốn chèn'));
-//     A1=A.slice((K),(A.length));
-//     console.log(A1);
-//     A2=A.slice(0,K);
-//     console.log(A2);
-//     D=A2.concat(B,A1);
-// console.log(D);
+    //     let A=[1,3,5,0,5,7,8];
+    //     let B=[];
+    //     let D=[];
+    //     let A1=[];
+    //     let A2=[];
+    //     let C=parseInt(prompt('nhập số N muốn nhập'));
+    //     for (i=0;i<C;i++){
+    //         B[i]=prompt('nhập số muốn nhập');
+    //     }
+    //     let K=parseInt(prompt('nhập nhập vị trí muốn chèn'));
+    //     A1=A.slice((K),(A.length));
+    //     console.log(A1);
+    //     A2=A.slice(0,K);
+    //     console.log(A2);
+    //     D=A2.concat(B,A1);
+    // console.log(D);
 
-// let arr = ["abc", "", "aaa", "a", "zz"];
+    // let arr = ["abc", "", "aaa", "a", "zz"];
     // let arr1 = [];
     // let temp = null;
     // console.log(arr[0].length);
@@ -45,49 +45,64 @@
     // }
     // console.log(arr1);
 
-// let inputArray = ["abc", "", "aaa", "a", "zz"];
-// inputArray.sort(function (a, b) {
-//     if (a.length > b.length) {
-//         return 1;
-//     }
-//     if (a.length < b.length) {
-//         return -1;
-//     }
-//     return 0;
-// });
-// console.log(inputArray)
+    // let inputArray = ["abc", "", "aaa", "a", "zz"];
+    // inputArray.sort(function (a, b) {
+    //     if (a.length > b.length) {
+    //         return 1;
+    //     }
+    //     if (a.length < b.length) {
+    //         return -1;
+    //     }
+    //     return 0;
+    // });
+    // console.log(inputArray)
 
+    // function Hero(image, top, left, size){
+    //     this.image = image;
+    //     this.top = top;
+    //     this.left = left;
+    //     this.size = size;
+    //
+    //     this.getHeroElement = function(){
+    //         return '<img width="'+ this.size + '"' +
+    //             ' height="'+ this.size + '"' +
+    //             ' src="' + this.image +'"' +
+    //             ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+    //     }
+    //
+    //     this.moveRight = function(){
+    //         this.left += 20;
+    //         console.log('ok: ' + this.left);
+    //     }
+    //
+    // }
+    //
+    // var hero = new Hero('3065.jpg',20, 370, 200, 600);
+    //
+    // function start(){
+    //     if(hero.left < window.innerWidth - hero.size){
+    //         hero.moveRight();
+    //     }
+    //     document.getElementById('game').innerHTML = hero.getHeroElement();
+    //     setTimeout(start, 500)
+    // }
+    //
+    // start();
 
-function Hero(image, top, left, size){
-    this.image = image;
-    this.top = top;
-    this.left = left;
-    this.size = size;
+    //TESTING
 
-    this.getHeroElement = function(){
-        return '<img width="'+ this.size + '"' +
-            ' height="'+ this.size + '"' +
-            ' src="' + this.image +'"' +
-            ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+    function tamgia(n) {
+        for (i=0;i<n;i++){
+            document.write("*");
+
+            for (j=0;j<i;j++){
+                document.write(" <br>");
+
+            }
+        }
+
     }
 
-    this.moveRight = function(){
-        this.left += 20;
-        console.log('ok: ' + this.left);
-    }
-
-}
-
-var hero = new Hero('3065.jpg',20, 370, 200, 600);
-
-function start(){
-    if(hero.left < window.innerWidth - hero.size){
-        hero.moveRight();
-    }
-    document.getElementById('game').innerHTML = hero.getHeroElement();
-    setTimeout(start, 500)
-}
-
-start();
+    tamgia(10);
 </script>
 </html>

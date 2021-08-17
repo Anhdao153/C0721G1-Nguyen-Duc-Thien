@@ -2,9 +2,115 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>baithi3</title>
 </head>
 <body>
-$END$
+<h1>Thêm mới sản phẩm</h1>
+<input type="date" id="ngaymoso" placeholder="Nhập ngày mở sổ">
+<input type="text" maxlength="30" id="name" placeholder="Nhập tên" >
+<input type="text" maxlength="10" id="loaitietkiem" placeholder="Nhập loại tiet kiem">
+<input type="number" id="cmnd" placeholder="Nhập chứng minh nhân dân">
+<input type="text" maxlength="5" id="type" placeholder="Nhập mã sổ tiết kiệm">
+<input type="number" id="money" placeholder="Nhập số tiền gửi">
+<button type="button" onclick="addNewsotietkiem();">Thêm mới</button>
+<div id="output"></div>
 </body>
+<script>
+    class Sotietkiem{
+        constructor(ngaymoso,cmnd,name,loaitietkiem,maso,sotiengui) {
+            this.name=name;
+            this.cmnd=cmnd;
+            this.loaitietkiem=loaitietkiem;
+            this.ngaymoso=ngaymoso;
+            this.maso=maso;
+            this.sotiengui=sotiengui;
+        }
+        getName(){
+            return this.name;
+        }
+        setName(){
+            this.name=value;
+        }
+        getNgaymoso(){
+            return this.ngaymoso;
+        }
+        setNgaymoso(){
+            this.ngaymoso=value;
+        }
+        setCMND(){
+            this.cmnd=value;
+        }
+        getCMND(){
+            return this.cmnd;
+        }
+        getLoaitietkiem(){
+            return this.loaitietkiem;
+        }
+        setLoaitietkiem(){
+            this.loaitietkiem=value;
+        }
+        getMaso(){
+            return this.maso;
+        }
+        setMaso() {
+            this.maso = value;
+        }
+        getSotiengui(){
+            return this.sotiengui;
+        }
+        setSotiengui(){
+            this.sotiengui=value
+        }
+    }
+    let sotietkiemlist=[];
+    let sotietKiem=new  Sotietkiem();
+
+    function display() {
+        let table="<table border='1'>"+"<tr> <th>Họ và Tên </th>" +
+        " <th> CMND </th>" +
+        " <th> số tiền gửi </th>" +
+        " <th> Loại sổ tiết kiệm </th>" +
+        " <th> Ngày mở sổ </th>" +
+            "<th> Mã sổ tiết kiệm </th></tr>";
+        for (let i=0;i<sotietkiemlist.length;i++){
+            table += "<tr>" +
+                "<td>" + sotietkiemlist[i].getName() + "</td>" +
+                "<td>" + sotietkiemlist[i].getCMND() + "</td>" +
+                "<td>" + sotietkiemlist[i].getSotiengui() + "</td>" +
+                "<td>" + sotietkiemlist[i].getLoaitietkiem() + "</td>" +
+                "<td>" + sotietkiemlist[i].getMaso() + "</td>" +
+                "<td>" + sotietkiemlist[i].getNgaymoso() + "</td>" +
+               // "<td><button onclick='showEdit(" + i + ")'>Sửa</button></td>" +
+                "<td><button onclick='del(" + i + ")'>Xóa</button></td>" +
+                "</tr>"
+        }
+    document.getElementById("output").innerHTML= table;
+    }
+    check=true;
+    function addNewsotietkiem() {
+        alert("đã thêm số tiết kiệm vào danh sách");
+        if (check) {
+            let ten = document.getElementById("name").value;
+            let CMND = document.getElementById("cmnd").value;
+            let ngaymoso = document.getElementById("ngaymoso").value;
+            let loaitietkiem = document.getElementById("loaitietkiem").value;
+            let tiengui = document.getElementById("money").value;
+            let masotietkiem = document.getElementById("type").value;
+            document.getElementById("name").value = "";
+            document.getElementById("cmnd").value = "";
+            document.getElementById("ngaymoso").value = "";
+            document.getElementById("loaitietkiem").value = "";
+            document.getElementById("type").value = "";
+            document.getElementById("money").value = "";
+            let sotietkiem = new Sotietkiem(masotietkiem, CMND,ten,loaitietkiem,ngaymoso,tiengui);
+            sotietkiemlist.push(sotietkiem);
+            display();
+            //alert('lỗi, mã sổ tiết kiệm bị suất hiện');
+        }
+    }
+    function del() {
+        confirm("bạn có chắc muốn xóa không?");
+        sotietkiemlist.pop(sotietkiem);
+    }
+</script>
 </html>

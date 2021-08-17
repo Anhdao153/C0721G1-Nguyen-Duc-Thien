@@ -29,19 +29,19 @@
 // for (i=0;i<d;i++){
 //     console.log('row' +i);
 //     for (j=0;j<r;j++){
-//         mang[i[j]]=parseInt(prompt('nhập gia trị'));
-//         console.log(mang[i[j]]);
+//         mang[i][j]=parseInt(prompt('nhập gia trị'));
+//         console.log(mang[i][j]);
 //     }
 // }
 
-// //bài 4 /// xem lại
+//bài 4 /// xem lại
 // let a=prompt('nhập độ dài của mảng');
 // let mang=[];
 //
 // for (i=0;i<a;i++) {
 //     mang[i] = prompt('nhập chuỗi');
 //     let b = mang[i];
-//     let mang[i]= b.split(',');
+//      mang[i]= b.split(',');
 // }
 // console.log(c);
 

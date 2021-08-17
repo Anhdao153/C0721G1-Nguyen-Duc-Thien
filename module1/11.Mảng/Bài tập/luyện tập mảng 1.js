@@ -123,20 +123,18 @@
 // let a = prompt('nhập độ dài mảng số nguyên');
 // let songuyen = [];
 // let b = 0;
-// let c = 0;
 // for (i = 0; i < a; i++) {
 //     songuyen[i] = parseInt(prompt("nhập giá trị"));
 // }
 // for (i = 0; i < a; i++) {
-//     for (j = 0; j <= i; j++) {
-//         if (songuyen[j] < songuyen[i]) {
+//     for (j = 0; j <=i; j++) {
+//         if (songuyen[j] >= songuyen[i]) {
 //             b = songuyen[i];
 //             songuyen[i] = songuyen[j];
 //             songuyen[j] = b;
 //         }
 //     }
-//
-// }
+// }  //3 1 4 5 2
 // document.write(' số ' + songuyen);
 
 // //bài 9

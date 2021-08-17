@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>baithi2</title>
 </head>
 <body>
-$END$
+
 </body>
+<script>
+    let a = parseFloat(prompt('nhập tử số của số a'));
+    let b = parseFloat(prompt('nhập mẫu số của số a'));
+    let c = parseFloat(prompt('nhập tử số của số b'));
+    let d = parseFloat(prompt('nhập mẫu số của số b'));
+
+    function sosanh() {
+        let e = a * d;
+        let f = b * c;
+        if (e === f) {
+            alert('đây là 2 số bằng nhau');
+            console.log("đây là if " + (a / b) + '<br>' + (c / d));
+        } else {
+            alert('đây là 2 số khác nhau');
+            console.log("đây là else " + e + '<br>' + f);
+        }
+    }
+
+    sosanh();
+</script>
 </html>
