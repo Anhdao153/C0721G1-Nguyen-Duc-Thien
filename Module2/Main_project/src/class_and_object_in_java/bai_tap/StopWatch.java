@@ -6,9 +6,11 @@ public class StopWatch {
         stopWatch.start();
         System.out.println("đếm time");
         for (int i=1;i<=1000000000;i++){
+            for(int j=i;j<100000000;j++){}
         }
         stopWatch.stop();
         stopWatch.getElapsedTime();
+        // System.out.println("Số mili giây đếm được:" +stopWatch.getElapsedTime()*1000000);
 
 
 

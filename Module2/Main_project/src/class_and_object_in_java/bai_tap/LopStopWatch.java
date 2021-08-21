@@ -21,7 +21,10 @@ public class LopStopWatch {
         getEndTime(endTime);
     }
     public void getElapsedTime(){
-        int ElaspedTime=(startTime.toSecondOfDay()-endTime.toSecondOfDay())*10000000;
-        System.out.println("Số mili giây đếm được:" +ElaspedTime);
+        long ElaspedTime;
+        ElaspedTime=(10000000*startTime.toSecondOfDay()-10000000*endTime.toSecondOfDay());
+        System.out.println(startTime);
+        System.out.println(endTime);
+        System.out.println("Số mili giây đếm được:" +ElaspedTime*1000000);
     }
 }
