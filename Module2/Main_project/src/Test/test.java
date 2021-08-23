@@ -4,27 +4,27 @@ package Test;
 import java.util.Scanner;
 
 public class test {
+
     public static void main(String[] args) {
-        int[] arr = {10, 4, 4, 7, 8, 0, 9};
-        System.out.println("Nhập vào phần tử muốn xóa: ");
-        Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
-        boolean check = false;
-        for (int i = 0; i < arr.length; i++) {
-            if (num == arr[i]) {
-                check = true;
-                for (int j = i; j < arr.length - 1; j++) {
-                    arr[j] = arr[j + 1];
-                }
-                arr[arr.length - 1] = 0;
+        Scanner scanner = new Scanner(System.in);
+        Add chay = new Add();
+        while (true) {
+            System.out.println("Chọn chức năng\n" +
+                    "1.Add\n" +
+                    "2.show\n" +
+                    "3.Exti");
+            System.out.print("Chọn ");
+            int choose = Integer.parseInt(scanner.nextLine());
+            switch (choose) {
+                case 1:
+                    chay.add();
+                    break;
+                case 2:
+                    chay.show();
+                    break;
+
+
             }
-        }
-        if (check) {
-            for (int i = 0; i < arr.length; i++) {
-                System.out.print(arr[i] + "\t");
-            }
-        } else {
-            System.out.println("Không có số muốn xóa trong mảng");
         }
     }
 }

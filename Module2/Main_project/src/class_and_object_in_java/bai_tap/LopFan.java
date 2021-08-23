@@ -10,8 +10,8 @@ public class LopFan {
         fan1.setRadius(10);
         fan2.setspeed(Fan.medium);
         fan1.seton(true);
-        System.out.println(fan1);
-        System.out.println(fan2);
+        System.out.println(fan1.toString());
+        System.out.println(fan2.toString());
 
 
 

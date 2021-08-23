@@ -49,8 +49,13 @@ public class Fan {
         this.radius = radius;
     }
 
+    @Override
     public String toString() {
-        return speed + " " + on + " " + radius + " " + color;
+        return "Fan{" +
+                "on=" + geton() +
+                ", speed=" + getspeed() +
+                ", radius=" + getRadius() +
+                ", color='" + getColor() + '\'' +
+                '}';
     }
-
 }

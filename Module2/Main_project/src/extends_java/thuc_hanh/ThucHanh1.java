@@ -1,6 +1,6 @@
 package extends_java.thuc_hanh;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+
 
 public class ThucHanh1 {
     public static void main(String[] args) {
