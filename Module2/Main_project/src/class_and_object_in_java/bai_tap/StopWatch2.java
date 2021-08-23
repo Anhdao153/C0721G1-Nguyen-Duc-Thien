@@ -1,6 +1,6 @@
 package class_and_object_in_java.bai_tap;
 import java.time.LocalTime;
-public class LopStopWatch {
+public class StopWatch2 {
     private LocalTime endTime;
     private LocalTime  startTime ;
     public LocalTime getStartTime(LocalTime startTime){
@@ -9,7 +9,7 @@ public class LopStopWatch {
     public LocalTime getEndTime(LocalTime endTime){
         return endTime;
     }
-    LopStopWatch(){
+    StopWatch2(){
         startTime=LocalTime.now();
     }
     public void start(){
