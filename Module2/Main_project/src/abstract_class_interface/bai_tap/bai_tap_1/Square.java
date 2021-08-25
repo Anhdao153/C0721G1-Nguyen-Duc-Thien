@@ -1,4 +1,4 @@
-package abstract_class_interface.bai_tap;
+package abstract_class_interface.bai_tap.bai_tap_1;
 
 public class Square implements resize {
     private double side;

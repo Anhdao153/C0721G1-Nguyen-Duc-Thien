@@ -47,9 +47,9 @@ public MoveablePoint(float x, float y,float xSpeed, float ySpeed){
                 ", y=" + y + " Speed ARR " + Arrays.toString(getSpeed()) +
                 '}';
     }
-    public void move(){
+    public MoveablePoint move(){
     x+=xSpeed;
     y+=ySpeed;
-
+    return this;
     }
 }

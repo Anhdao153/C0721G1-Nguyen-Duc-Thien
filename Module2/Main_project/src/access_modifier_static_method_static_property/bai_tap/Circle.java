@@ -9,9 +9,8 @@ public class Circle {
         this.color=color;
     }
     public Circle(){
-//        radius=1;
-//        color="red";
     }
+
 
     public double getRadius() {
         return radius;
