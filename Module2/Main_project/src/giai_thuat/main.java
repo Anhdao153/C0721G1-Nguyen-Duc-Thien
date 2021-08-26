@@ -4,34 +4,34 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class main {
-    public Character[] find(String string) {
-        Character[] strings = new Character[string.length()];
-        Character[] strings1 = new Character[string.length()];
-        int temp = 0;
-
-
-
-
-        for (int i = 0; i < string.length(); i++) {
-            strings[i] =string.charAt(i);
-        }
-        for (int i = 0; i < strings.length - 1 ; i++) {
-            for (int j = i + 1; j < strings.length; j++) {
-                if (strings[i].equals(strings[j]) && strings[i] !=' ') {
-                    strings1[temp] = strings[i];
-                    temp++;
-                    strings[j] = ' ';
-                    break;
+    public static String[] find(String str) {
+        String[] arrResult = null;
+        String tempResult = "";
+        for (int i = 0; i < str.length(); i++) {
+            int count = 0;
+            for (int j = 0; j < str.length(); j++) {
+                if (str.charAt(i) == str.charAt(j)) {
+                    count++;
+                }
+            }
+            // kiểm tra nếu xuất hiện lớn hơn 1 lần và khác " "
+            if (count > 1 && !String.valueOf(str.charAt(i)).equals(" ")) {
+                boolean flag = false;
+                // kiểm tra để lấy giá trị duy nhất
+                for (int k = 0; k < tempResult.length(); k++) {
+                    if (str.charAt(i) == tempResult.charAt(k)) {
+                        flag = true;
+                    }
+                }
+                // cho ký tự vào biến tạm nếu chưa tồn tại trong biến tạm
+                if (!flag) {
+                    tempResult += str.charAt(i);
                 }
             }
         }
-        Character[] strings2 = new Character[temp];
-        for (int i = 0; i < temp ; i++) {
-            strings2[i] = strings1[i];
-
-        }
-        return strings2;
-
+        // chuyển về mảng theo yêu cầu
+        arrResult = tempResult.split("");
+        return arrResult;
     }
 
     public static void main(String[] args) {
