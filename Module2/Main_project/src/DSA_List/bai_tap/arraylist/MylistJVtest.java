@@ -1,4 +1,4 @@
-package list.bai_tap.arraylist;
+package DSA_List.bai_tap.arraylist;
 
 public class MylistJVtest {
 
