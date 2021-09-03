@@ -33,8 +33,10 @@ public class BaiTapFixBugTuan3 {
             }
             num++;
         }
-        for (int i=0;i<stack.size(); i++){
+        for (int i=0;i<20; i++){
+            //System.out.println(stack.peek());
             System.out.println(stack.pop());
+
         }
     }
 }
