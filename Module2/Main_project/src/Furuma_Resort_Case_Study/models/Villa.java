@@ -6,25 +6,34 @@ import java.util.Scanner;
 public class Villa extends Facility {
     Scanner in = new Scanner(System.in);
     private double square;
+    private double squarehoboi;
     private double cost;
     private int people=1;
-    int time = 0;
+    private int sotang=1;
     int total;
-    public Villa(double square,double cost,int people,int time){
+    public Villa(double square,double cost,int people){
         this.people=people;
         this.cost=cost;
         this.square=square;
-        this.time=time;
     }
     public Villa(){}
 
-    public int getTime() {
-        return time;
+    public double getSquarehoboi() {
+        return squarehoboi;
     }
 
-    public void setTime(int time) {
-        this.time = time;
+    public void setSquarehoboi(double squarehoboi) {
+        this.squarehoboi = squarehoboi;
     }
+
+    public int getSotang() {
+        return sotang;
+    }
+
+    public void setSotang(int sotang) {
+        this.sotang = sotang;
+    }
+
 
     public int getPeople() {
         return people;
@@ -50,6 +59,19 @@ public class Villa extends Facility {
         this.square = square;
     }
 
+    public double SquareHoboi(){
+        System.out.println("diện tích hồ bơi");
+        double squarehoboi= Double.parseDouble(in.nextLine());
+        setSquarehoboi(squarehoboi);
+        return getSquarehoboi();
+    }
+    public int SoTang(){
+        System.out.println("Nhập số tầng mà bạn muốn thuê");
+        int sotang=Integer.parseInt(in.nextLine());
+        setSotang(sotang);
+        return getSotang();
+    }
+
     @Override
     public String TenDichVu() {
         return "Phòng hạng sang villa";
@@ -66,7 +88,7 @@ public class Villa extends Facility {
     @Override
     public double ChiPhiThue() {
         System.out.println("Tổng chi phí thuê của quý khách là: ");
-        double Cost=getPeople()*getSquare()*total;
+        double Cost=getPeople()*500000+getSquare()*50000+total*500000+getSotang()*500000+getSquarehoboi()*50000;
         setCost(Cost);
         return getCost();
     }
@@ -75,6 +97,7 @@ public class Villa extends Facility {
     public int SoNguoiToida() {
         System.out.println("Tổng số người thuê 1 căn phòng");
         people=Integer.parseInt(in.nextLine());
+        setPeople(people);
         return getPeople();
     }
 
@@ -100,6 +123,7 @@ public class Villa extends Facility {
                total=year*365;
                break;
        }
-        return total;
+        return (total);
     }
+
 }
