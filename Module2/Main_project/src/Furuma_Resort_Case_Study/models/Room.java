@@ -5,49 +5,49 @@ import java.util.Scanner;
 public class Room extends Facility {
     Scanner in =new Scanner(System.in);
     private int total;
-    private int People;
-    private double Square;
-private double Cost;
-private String FreeService;
+    private int people;
+    private double square;
+private double cost;
+private String freeService;
 
     public String getFreeService() {
-        return FreeService;
+        return freeService;
     }
 
     public void setFreeService(String freeService) {
-        FreeService = freeService;
+        this.freeService = freeService;
     }
 
     public double getCost() {
-        return Cost;
+        return cost;
     }
 
     public void setCost(double cost) {
-        Cost = cost;
+        this.cost = cost;
     }
 
     public double getSquare() {
-        return Square;
+        return square;
     }
 
     public void setSquare(double square) {
-        Square = square;
+        this.square = square;
     }
 
     public int getPeople() {
-        return People;
+        return people;
     }
 
     public void setPeople(int people) {
-        People = people;
+        this.people = people;
     }
     public String FreeService(){
         System.out.println("hãy nhập 1 dịch vụ mà bạn muốn sử dụng của resort. (Hoàn toàn miễn phí)");
-        FreeService=in.nextLine();
-        setFreeService(FreeService);
+        freeService =in.nextLine();
+        setFreeService(freeService);
         return getFreeService();
     }
-    @Override
+
     public String TenDichVu() {
         return "Dịch vụ thuê phong nghỉ dưỡng";
     }
@@ -71,8 +71,8 @@ private String FreeService;
     @Override
     public int SoNguoiToida() {
         System.out.println("Tổng số người thuê 1 căn phòng");
-        People = Integer.parseInt(in.nextLine());
-        setPeople(People);
+        people = Integer.parseInt(in.nextLine());
+        setPeople(people);
         return getPeople();
     }
 

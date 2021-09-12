@@ -4,91 +4,91 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Employee extends Person {
-    private String Name;
-    private int Age;
-    private String Address;
-    private int Phone;
+    private String name;
+    private int age;
+    private String address;
+    private int phone;
     private int CMND;
-    private String Gender;
-    private int StaffId;
-    private double Salary;
-    private String Email;
-    private long Birthday;
-    private String Position;
-    private String EducateAndExperience;
+    private String gender;
+    private int staffId;
+    private double salary;
+    private String email;
+    private long birthday;
+    private String position;
+    private String educateAndexperience;
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getPosition() {
-        return Position;
+        return position;
     }
 
     public void setPosition(String position) {
-        Position = position;
+        this.position = position;
     }
 
     public long getBirthday() {
-        return Birthday;
+        return birthday;
     }
 
     public void setBirthday(long birthday) {
-        Birthday = birthday;
+        this.birthday = birthday;
     }
 
-    public String getEducateAndExperience() {
-        return EducateAndExperience;
+    public String getEducateAndexperience() {
+        return educateAndexperience;
     }
 
-    public void setEducateAndExperience(String educateAndExperience) {
-        EducateAndExperience = educateAndExperience;
+    public void setEducateAndexperience(String educateAndexperience) {
+        this.educateAndexperience = educateAndexperience;
     }
 
     public double getSalary() {
-        return Salary;
+        return salary;
     }
 
     public void setSalary(double salary) {
-        Salary = salary;
+        this.salary = salary;
     }
 
     public int getStaffId() {
-        return StaffId;
+        return staffId;
     }
 
     public void setStaffId(int staffId) {
-        StaffId = staffId;
+        this.staffId = staffId;
     }
 
     Scanner in=new Scanner(System.in);
     public Employee(){}
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public int getAge() {
-        return Age;
+        return age;
     }
 
     public void setAge(int age) {
-        Age = age;
+        this.age = age;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 
     public int getCMND() {
@@ -100,86 +100,86 @@ public class Employee extends Person {
     }
 
     public int getPhone() {
-        return Phone;
+        return phone;
     }
 
     public void setPhone(int phone) {
-        Phone = phone;
+        this.phone = phone;
     }
 
     public String getGender() {
-        return Gender;
+        return gender;
     }
 
     public void setGender(String gender) {
-        Gender = gender;
+        this.gender = gender;
     }
     public long Brithday(){
-        Birthday=Date.parse(in.nextLine());
+        birthday =Date.parse(in.nextLine());
         return getBirthday();
     }
     public String EducateAndExperience() {
         System.out.println("Nhập trình độ học vấn Trung cấp, Cao đẳng, Đại học và sau đại học");
         System.out.println("Và kinh nghiệm làm việc, nếu có");
         System.out.println("Ghi theo format| (Trình độ học vấn) Và đã có (Kinh nghiệm làm việc)");
-        EducateAndExperience=in.nextLine();
-        setEducateAndExperience(EducateAndExperience);
-        return getEducateAndExperience();
+        educateAndexperience =in.nextLine();
+        setEducateAndexperience(educateAndexperience);
+        return getEducateAndexperience();
     }
     public String Position() {
         System.out.println("Nhập vị trí: Lễ tân, phục vụ, chuyên viên, giám sát, quản lý, giám đốc");
-        Position=in.nextLine();
-        setPosition(Position);
+        position =in.nextLine();
+        setPosition(position);
         return getPosition();
     }
     @Override
     public String Email() {
         System.out.println("Nhập Email nhân viên");
-        Email=in.nextLine();
-        setEmail(Email);
+        email =in.nextLine();
+        setEmail(email);
         return getEmail();
     }
     public double Salary(){
         System.out.println("Nhập tiền lương cho nhân viên");
-        Salary=Double.parseDouble(in.nextLine());
-        setSalary(Salary);
+        salary =Double.parseDouble(in.nextLine());
+        setSalary(salary);
         return getSalary();
     }
     public int IDStaff(){
         System.out.println("nhập id của nhân viên");
-        StaffId=Integer.parseInt(in.nextLine());
-        setStaffId(StaffId);
+        staffId =Integer.parseInt(in.nextLine());
+        setStaffId(staffId);
         return getStaffId();
     }
     @Override
     public String Name() {
         System.out.println("Nhập tên nhân viên");
-        Name=in.nextLine();
-        setName(Name);
+        name =in.nextLine();
+        setName(name);
         return getName();
     }
 
     @Override
     public int Age() {
         System.out.println("Nhập độ tuổi");
-        Age=Integer.parseInt(in.nextLine());
-        setAge(Age);
+        age =Integer.parseInt(in.nextLine());
+        setAge(age);
         return getAge();
     }
 
     @Override
     public String Address() {
         System.out.println("Nhập địa chỉ cư trú");
-        Address=in.nextLine();
-        setAddress(Address);
+        address =in.nextLine();
+        setAddress(address);
         return getAddress();
     }
 
     @Override
     public int Phone() {
         System.out.println("Nhập số điện thoại");
-        Phone=Integer.parseInt(in.nextLine());
-        setPhone(Phone);
+        phone =Integer.parseInt(in.nextLine());
+        setPhone(phone);
         return getPhone();
     }
 
@@ -194,7 +194,7 @@ public class Employee extends Person {
     @Override
     public String Gender() {
         System.out.println("Nhập giới tính");
-        Gender=in.nextLine();
-        setGender(Gender);
+        gender =in.nextLine();
+        setGender(gender);
         return getGender();
     }}

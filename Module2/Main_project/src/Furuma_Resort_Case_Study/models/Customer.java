@@ -3,54 +3,54 @@ package Furuma_Resort_Case_Study.models;
 import java.util.Scanner;
 
 public class Customer extends Person {
-    private String Name;
-    private int Age;
-    private String Address;
-    private int Phone;
+    private String name;
+    private int age;
+    private String address;
+    private int phone;
     private int CMND;
-    private String Gender;
-    private String Email;
-    private int CustomerID;
+    private String gender;
+    private String email;
+    private int customerID;
     public Customer(){}
  Scanner in=new Scanner(System.in);
     public String getName() {
-        return Name;
+        return name;
     }
 
     public int getCustomerID() {
-        return CustomerID;
+        return customerID;
     }
 
     public void setCustomerID(int customerID) {
-        CustomerID = customerID;
+        this.customerID = customerID;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public int getAge() {
-        return Age;
+        return age;
     }
 
     public void setAge(int age) {
-        Age = age;
+        this.age = age;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 
     public int getCMND() {
@@ -62,23 +62,23 @@ public class Customer extends Person {
     }
 
     public int getPhone() {
-        return Phone;
+        return phone;
     }
 
     public void setPhone(int phone) {
-        Phone = phone;
+        this.phone = phone;
     }
 
     public String getGender() {
-        return Gender;
+        return gender;
     }
 
     public void setGender(String gender) {
-        Gender = gender;
+        this.gender = gender;
     }
     public int CustomerID(){
-        CustomerID=Integer.parseInt(in.nextLine());
-        setCustomerID(CustomerID);
+        customerID =Integer.parseInt(in.nextLine());
+        setCustomerID(customerID);
         return getCustomerID();
     }
     public String TypeCustomer(){
@@ -110,29 +110,29 @@ public class Customer extends Person {
     }
     @Override
     public String Name() {
-        Name=in.nextLine();
-        setName(Name);
+        name =in.nextLine();
+        setName(name);
         return getName();
     }
 
     @Override
     public int Age() {
-        Age=Integer.parseInt(in.nextLine());
-        setAge(Age);
+        age =Integer.parseInt(in.nextLine());
+        setAge(age);
         return getAge();
     }
 
     @Override
     public String Address() {
-        Address=in.nextLine();
-        setAddress(Address);
+        address =in.nextLine();
+        setAddress(address);
         return getAddress();
     }
 
     @Override
     public int Phone() {
-        Phone=Integer.parseInt(in.nextLine());
-        setPhone(Phone);
+        phone =Integer.parseInt(in.nextLine());
+        setPhone(phone);
         return getPhone();
     }
 
@@ -145,8 +145,8 @@ public class Customer extends Person {
 
     @Override
     public String Gender() {
-        Gender=in.nextLine();
-        setGender(Gender);
+        gender =in.nextLine();
+        setGender(gender);
         return getGender();
     }
 

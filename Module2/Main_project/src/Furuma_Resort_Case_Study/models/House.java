@@ -9,32 +9,32 @@ public class House extends Facility {
     Scanner in = new Scanner(System.in);
     private int total;
     private int sotang;
-    private double Square;
-    private int People;
-    private double Cost;
+    private double square;
+    private int people;
+    private double cost;
 
     public double getSquare() {
-        return Square;
+        return square;
     }
 
     public void setSquare(double square) {
-        Square = square;
+        this.square = square;
     }
 
     public double getCost() {
-        return Cost;
+        return cost;
     }
 
     public void setCost(double cost) {
-        Cost = cost;
+        this.cost = cost;
     }
 
     public int getPeople() {
-        return People;
+        return people;
     }
 
     public void setPeople(int People) {
-        this.People = People;
+        this.people = People;
     }
 
     public int getSotang() {
@@ -52,7 +52,7 @@ public class House extends Facility {
         return getSotang();
     }
 
-    @Override
+
     public String TenDichVu() {
         return "Phòng hạng thương gia House";
     }
@@ -76,8 +76,8 @@ public class House extends Facility {
     @Override
     public int SoNguoiToida() {
         System.out.println("Tổng số người thuê 1 căn phòng");
-        People = Integer.parseInt(in.nextLine());
-        setPeople(People);
+        people = Integer.parseInt(in.nextLine());
+        setPeople(people);
         return getPeople();
     }
 

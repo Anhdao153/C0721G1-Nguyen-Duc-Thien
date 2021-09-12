@@ -1,52 +1,52 @@
 package Furuma_Resort_Case_Study.models;
 
 public class Contract {
-    private int IdContract;
-    private int BookingId;
-    private double PrePay;
-    private double Bills;
-    private int CustomerID;
+    private int idcontract;
+    private int bookingId;
+    private double prepay;
+    private double bills;
+    private int customerID;
     public Contract(){
 
     }
 
     public int getCustomerID() {
-        return CustomerID;
+        return customerID;
     }
 
     public void setCustomerID(int customerID) {
-        CustomerID = customerID;
+        this.customerID = customerID;
     }
 
     public double getBills() {
-        return Bills;
+        return bills;
     }
 
     public void setBills(double bills) {
-        Bills = bills;
+        this.bills = bills;
     }
 
-    public double getPrePay() {
-        return PrePay;
+    public double getPrepay() {
+        return prepay;
     }
 
-    public void setPrePay(double prePay) {
-        PrePay = prePay;
+    public void setPrepay(double prepay) {
+        this.prepay = prepay;
     }
 
     public int getBookingId() {
-        return BookingId;
+        return bookingId;
     }
 
     public void setBookingId(int bookingId) {
-        BookingId = bookingId;
+        this.bookingId = bookingId;
     }
 
-    public int getIdContract() {
-        return IdContract;
+    public int getIdcontract() {
+        return idcontract;
     }
 
-    public void setIdContract(int idContract) {
-        IdContract = idContract;
+    public void setIdcontract(int idcontract) {
+        this.idcontract = idcontract;
     }
 }

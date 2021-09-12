@@ -72,7 +72,7 @@ public class Villa extends Facility {
         return getSotang();
     }
 
-    @Override
+
     public String TenDichVu() {
         return "Phòng hạng sang villa";
     }

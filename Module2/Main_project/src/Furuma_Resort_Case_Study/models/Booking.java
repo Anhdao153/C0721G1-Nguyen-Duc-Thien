@@ -6,15 +6,15 @@ import java.util.Scanner;
 public class Booking {
     Scanner in=new Scanner(System.in);
     private int bookingID;
-    private Calendar FromDay;
-    private Calendar UntilDay;
-    private int IdCustomer;
-    private String NamofService;
-    private String TypeofService;
+    private Calendar fromday;
+    private Calendar untilday;
+    private int idcustomer;
+    private String nameofservice;
+    private String typeofservice;
     public Booking(){}
 
-    public Calendar getFromDay() {
-        return FromDay;
+    public Calendar getFromday() {
+        return fromday;
     }
 
     public void setBooking(int bookingID) {
@@ -25,55 +25,55 @@ public class Booking {
         return bookingID;
     }
 
-    public Calendar getUntilDay() {
-        return UntilDay;
+    public Calendar getUntilday() {
+        return untilday;
     }
 
-    public void setFromDay(Calendar fromDay) {
-        FromDay = fromDay;
+    public void setFromday(Calendar fromday) {
+        this.fromday = fromday;
     }
 
-    public void setUntilDay(Calendar untilDay) {
-        UntilDay = untilDay;
+    public void setUntilday(Calendar untilday) {
+        this.untilday = untilday;
     }
 
-    public void setIdCustomer(int idCustomer) {
-        IdCustomer = idCustomer;
+    public void setIdcustomer(int idcustomer) {
+        this.idcustomer = idcustomer;
     }
 
-    public int getIdCustomer() {
-        return IdCustomer;
+    public int getIdcustomer() {
+        return idcustomer;
     }
 
-    public String getNamofService() {
-        return NamofService;
+    public String getNameofservice() {
+        return nameofservice;
     }
 
-    public String getTypeofService() {
-        return TypeofService;
+    public String getTypeofservice() {
+        return typeofservice;
     }
 
-    public void setNamofService(String namofService) {
-        NamofService = namofService;
+    public void setNameofservice(String nameofservice) {
+        this.nameofservice = nameofservice;
     }
 
-    public void setTypeofService(String typeofService) {
-        TypeofService = typeofService;
+    public void setTypeofservice(String typeofservice) {
+        this.typeofservice = typeofservice;
     }
     public int IdCustomer(){
-        IdCustomer= Integer.parseInt(in.nextLine());
-        setIdCustomer(IdCustomer);
-        return getIdCustomer();
+        idcustomer = Integer.parseInt(in.nextLine());
+        setIdcustomer(idcustomer);
+        return getIdcustomer();
     }
     public Calendar FromDay(){
-         FromDay=Calendar.getInstance();
-        System.out.println("Bắt đầu thuê từ ngày: "+FromDay.getTime());
-         return getFromDay();
+         fromday =Calendar.getInstance();
+        System.out.println("Bắt đầu thuê từ ngày: "+ fromday.getTime());
+         return getFromday();
     }
     public Calendar UntilDay(){
         int songaythue=in.nextInt();
-        FromDay.add(Calendar.DATE,songaythue);
-        System.out.println("Cho đế ngày: "+FromDay.getTime());
-        return getUntilDay();
+        fromday.add(Calendar.DATE,songaythue);
+        System.out.println("Cho đế ngày: "+ fromday.getTime());
+        return getUntilday();
     }
 }
