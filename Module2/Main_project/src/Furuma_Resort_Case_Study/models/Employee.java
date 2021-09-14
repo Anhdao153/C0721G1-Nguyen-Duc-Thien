@@ -4,18 +4,28 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Employee extends Person {
-    private String name;
-    private int age;
-    private String address;
-    private int phone;
-    private int CMND;
-    private String gender;
     private int staffId;
     private double salary;
-    private String email;
-    private long birthday;
     private String position;
     private String educateAndexperience;
+
+    public Employee() {
+    }
+
+    public Employee(int staffId, String name, int age, String address, int phone, int CMND, String gender, String email, double salary, long birthday, String position, String educateAndexperience) {
+        this.birthday = birthday;
+        this.salary = salary;
+        this.staffId = staffId;
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.position = position;
+        this.phone = phone;
+        this.CMND = CMND;
+        this.gender = gender;
+        this.educateAndexperience = educateAndexperience;
+        this.email = email;
+    }
 
     public String getEmail() {
         return email;
@@ -32,11 +42,11 @@ public class Employee extends Person {
     public void setPosition(String position) {
         this.position = position;
     }
-
+    @Override
     public long getBirthday() {
         return birthday;
     }
-
+    @Override
     public void setBirthday(long birthday) {
         this.birthday = birthday;
     }
@@ -65,136 +75,80 @@ public class Employee extends Person {
         this.staffId = staffId;
     }
 
-    Scanner in=new Scanner(System.in);
-    public Employee(){}
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public int getCMND() {
-        return CMND;
-    }
-
-    public void setCMND(int CMND) {
-        this.CMND = CMND;
-    }
-
-    public int getPhone() {
-        return phone;
-    }
-
-    public void setPhone(int phone) {
-        this.phone = phone;
-    }
-
+    @Override
     public String getGender() {
-        return gender;
+        return super.getGender();
     }
 
+    @Override
     public void setGender(String gender) {
-        this.gender = gender;
-    }
-    public long Brithday(){
-        birthday =Date.parse(in.nextLine());
-        return getBirthday();
-    }
-    public String EducateAndExperience() {
-        System.out.println("Nhập trình độ học vấn Trung cấp, Cao đẳng, Đại học và sau đại học");
-        System.out.println("Và kinh nghiệm làm việc, nếu có");
-        System.out.println("Ghi theo format| (Trình độ học vấn) Và đã có (Kinh nghiệm làm việc)");
-        educateAndexperience =in.nextLine();
-        setEducateAndexperience(educateAndexperience);
-        return getEducateAndexperience();
-    }
-    public String Position() {
-        System.out.println("Nhập vị trí: Lễ tân, phục vụ, chuyên viên, giám sát, quản lý, giám đốc");
-        position =in.nextLine();
-        setPosition(position);
-        return getPosition();
-    }
-    @Override
-    public String Email() {
-        System.out.println("Nhập Email nhân viên");
-        email =in.nextLine();
-        setEmail(email);
-        return getEmail();
-    }
-    public double Salary(){
-        System.out.println("Nhập tiền lương cho nhân viên");
-        salary =Double.parseDouble(in.nextLine());
-        setSalary(salary);
-        return getSalary();
-    }
-    public int IDStaff(){
-        System.out.println("nhập id của nhân viên");
-        staffId =Integer.parseInt(in.nextLine());
-        setStaffId(staffId);
-        return getStaffId();
-    }
-    @Override
-    public String Name() {
-        System.out.println("Nhập tên nhân viên");
-        name =in.nextLine();
-        setName(name);
-        return getName();
+        super.setGender(gender);
     }
 
     @Override
-    public int Age() {
-        System.out.println("Nhập độ tuổi");
-        age =Integer.parseInt(in.nextLine());
-        setAge(age);
-        return getAge();
+    public int getAge() {
+        return super.getAge();
     }
 
     @Override
-    public String Address() {
-        System.out.println("Nhập địa chỉ cư trú");
-        address =in.nextLine();
-        setAddress(address);
-        return getAddress();
+    public int getCMND() {
+        return super.getCMND();
     }
 
     @Override
-    public int Phone() {
-        System.out.println("Nhập số điện thoại");
-        phone =Integer.parseInt(in.nextLine());
-        setPhone(phone);
-        return getPhone();
+    public int getPhone() {
+        return super.getPhone();
     }
 
     @Override
-    public int CMND() {
-        System.out.println("Nhập căn cước công dân");
-        CMND=Integer.parseInt(in.nextLine());
-        setCMND(CMND);
-        return getCMND();
+    public String getAddress() {
+        return super.getAddress();
     }
 
     @Override
-    public String Gender() {
-        System.out.println("Nhập giới tính");
-        gender =in.nextLine();
-        setGender(gender);
-        return getGender();
-    }}
+    public String getName() {
+        return super.getName();
+    }
+
+    @Override
+    public void setAddress(String address) {
+        super.setAddress(address);
+    }
+
+    @Override
+    public void setAge(int age) {
+        super.setAge(age);
+    }
+
+    @Override
+    public void setCMND(int CMND) {
+        super.setCMND(CMND);
+    }
+
+    @Override
+    public void setName(String name) {
+        super.setName(name);
+    }
+
+    @Override
+    public void setPhone(int phone) {
+        super.setPhone(phone);
+    }
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "staffId=" + staffId +
+                ", salary=" + salary +
+                ", birthday=" + birthday +
+                ", position='" + position + '\'' +
+                ", educateAndexperience='" + educateAndexperience + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", address='" + address + '\'' +
+                ", phone=" + phone +
+                ", CMND=" + CMND +
+                ", gender='" + gender + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
+}

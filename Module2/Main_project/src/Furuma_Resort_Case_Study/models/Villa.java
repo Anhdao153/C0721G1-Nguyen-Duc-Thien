@@ -4,19 +4,89 @@ package Furuma_Resort_Case_Study.models;
 import java.util.Scanner;
 
 public class Villa extends Facility {
-    Scanner in = new Scanner(System.in);
-    private double square;
     private double squarehoboi;
-    private double cost;
-    private int people=1;
-    private int sotang=1;
-    int total;
-    public Villa(double square,double cost,int people){
-        this.people=people;
-        this.cost=cost;
-        this.square=square;
+    private int sotang;
+    private String tieuchuanphong;
+
+    public Villa() {
     }
-    public Villa(){}
+
+    public Villa(double square, double squarehoboi, int sotang, String tieuchuanphong, String tendichvu, double cost, int kieuThue, int people) {
+        this.sotang = sotang;
+        this.squarehoboi = squarehoboi;
+        this.square = square;
+        this.people = people;
+        this.kieuThue = kieuThue;
+        this.cost = cost;
+        this.tieuchuanphong = tieuchuanphong;
+        this.tendichvu = tendichvu;
+    }
+
+    @Override
+    public void setTendichvu(String tendichvu) {
+        super.setTendichvu(tendichvu);
+    }
+
+    @Override
+    public String getTendichvu() {
+        return super.getTendichvu();
+    }
+
+    public String getTieuchuanphong() {
+        return tieuchuanphong;
+    }
+
+    public void setTieuchuanphong(String tieuchuanphong) {
+        this.tieuchuanphong = tieuchuanphong;
+    }
+
+    @Override
+    public void setPeople(int people) {
+        super.setPeople(people);
+    }
+
+    @Override
+    public int getPeople() {
+        return super.getPeople();
+    }
+
+    public void setSotang(int sotang) {
+        this.sotang = sotang;
+    }
+
+    public int getSotang() {
+        return sotang;
+    }
+
+    @Override
+    public int getKieuThue() {
+        return super.getKieuThue();
+    }
+
+    @Override
+    public void setSquare(double square) {
+        super.setSquare(square);
+    }
+
+    @Override
+    public void setKieuThue(int kieuThue) {
+        super.setKieuThue(kieuThue);
+    }
+
+    @Override
+    public double getSquare() {
+        return super.getSquare();
+    }
+
+    @Override
+    public void setCost(double cost) {
+        super.setCost(cost);
+    }
+
+    @Override
+    public double getCost() {
+        return super.getCost();
+    }
 
     public double getSquarehoboi() {
         return squarehoboi;
@@ -26,104 +96,17 @@ public class Villa extends Facility {
         this.squarehoboi = squarehoboi;
     }
 
-    public int getSotang() {
-        return sotang;
-    }
-
-    public void setSotang(int sotang) {
-        this.sotang = sotang;
-    }
-
-
-    public int getPeople() {
-        return people;
-    }
-
-    public void setPeople(int people) {
-        this.people = people;
-    }
-
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
-
-    public double getCost() {
-        return cost;
-    }
-
-    public double getSquare() {
-        return square;
-    }
-
-    public void setSquare(double square) {
-        this.square = square;
-    }
-
-    public double SquareHoboi(){
-        System.out.println("diện tích hồ bơi");
-        double squarehoboi= Double.parseDouble(in.nextLine());
-        setSquarehoboi(squarehoboi);
-        return getSquarehoboi();
-    }
-    public int SoTang(){
-        System.out.println("Nhập số tầng mà bạn muốn thuê");
-        int sotang=Integer.parseInt(in.nextLine());
-        setSotang(sotang);
-        return getSotang();
-    }
-
-
-    public String TenDichVu() {
-        return "Phòng hạng sang villa";
-    }
-
     @Override
-    public double DienTichPhong() {
-        System.out.println("Nhập diện tích căn phòng muốn thuê");
-        double Square= Double.parseDouble(in.nextLine());
-        setSquare(Square);
-        return getSquare();
+    public String toString() {
+        return "Villa{" +
+                "squarehoboi=" + squarehoboi +
+                ", sotang=" + sotang +
+                ", tieuchuanphong='" + tieuchuanphong + '\'' +
+                ", square=" + square +
+                ", people=" + people +
+                ", kieuThue=" + kieuThue +
+                ", cost=" + cost +
+                ", tendichvu='" + tendichvu + '\'' +
+                '}';
     }
-
-    @Override
-    public double ChiPhiThue() {
-        System.out.println("Tổng chi phí thuê của quý khách là: ");
-        double Cost=getPeople()*500000+getSquare()*50000+total*500000+getSotang()*500000+getSquarehoboi()*50000;
-        setCost(Cost);
-        return getCost();
-    }
-
-    @Override
-    public int SoNguoiToida() {
-        System.out.println("Tổng số người thuê 1 căn phòng");
-        people=Integer.parseInt(in.nextLine());
-        setPeople(people);
-        return getPeople();
-    }
-
-    @Override
-    public int KieuThue() {
-        System.out.println("Chọn kiểu thuê \n1. Ngày\n2. Tháng\n3.Năm");
-        int type= Integer.parseInt(in.nextLine());
-
-       switch (type){
-           case 1:
-               System.out.println("Nhập số lượng ngày thuê");
-               int day = Integer.parseInt(in.nextLine());
-               total=day;
-               break;
-           case 2:
-               System.out.println("nhập số lượng tháng thuê");
-               int month = Integer.parseInt(in.nextLine());
-               total=month*30;
-               break;
-           case 3:
-               System.out.println("nhập số lượng năm thuê");
-               int year = Integer.parseInt(in.nextLine());
-               total=year*365;
-               break;
-       }
-        return (total);
-    }
-
 }

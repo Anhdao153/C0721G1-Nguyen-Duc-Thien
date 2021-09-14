@@ -3,102 +3,71 @@ package Furuma_Resort_Case_Study.models;
 import java.util.Scanner;
 
 public class Room extends Facility {
-    Scanner in =new Scanner(System.in);
-    private int total;
-    private int people;
-    private double square;
-private double cost;
-private String freeService;
-
-    public String getFreeService() {
-        return freeService;
-    }
-
-    public void setFreeService(String freeService) {
-        this.freeService = freeService;
-    }
-
-    public double getCost() {
-        return cost;
-    }
-
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
-
-    public double getSquare() {
-        return square;
-    }
-
-    public void setSquare(double square) {
+    private String freeservice;
+    public Room(){}
+    public Room(double square, int people, int kieuThue, double cost, String tendichvu){
         this.square = square;
-    }
-
-    public int getPeople() {
-        return people;
-    }
-
-    public void setPeople(int people) {
         this.people = people;
-    }
-    public String FreeService(){
-        System.out.println("hãy nhập 1 dịch vụ mà bạn muốn sử dụng của resort. (Hoàn toàn miễn phí)");
-        freeService =in.nextLine();
-        setFreeService(freeService);
-        return getFreeService();
-    }
-
-    public String TenDichVu() {
-        return "Dịch vụ thuê phong nghỉ dưỡng";
+        this.kieuThue = kieuThue;
+        this.cost = cost;
+        this.tendichvu = tendichvu;
     }
 
     @Override
-    public double DienTichPhong() {
-        System.out.println("Nhập diện tích căn phòng muốn thuê");
-        double Square = Double.parseDouble(in.nextLine());
-        setSquare(Square);
-        return getSquare();
+    public double getCost() {
+        return super.getCost();
     }
 
     @Override
-    public double ChiPhiThue() {
-        System.out.println("Tổng chi phí thuê của quý khách là: ");
-        double Cost = getPeople() * 500000 + getSquare() * 50000 + total * 500000;
-        setCost(Cost);
-        return getCost();
+    public void setCost(double cost) {
+        super.setCost(cost);
     }
 
     @Override
-    public int SoNguoiToida() {
-        System.out.println("Tổng số người thuê 1 căn phòng");
-        people = Integer.parseInt(in.nextLine());
-        setPeople(people);
-        return getPeople();
+    public double getSquare() {
+        return super.getSquare();
     }
 
     @Override
-    public int KieuThue() {
-        System.out.println("Chọn kiểu thuê \n1. Ngày\n2. Tháng\n3.Năm");
-        int type = Integer.parseInt(in.nextLine());
+    public void setKieuThue(int kieuThue) {
+        super.setKieuThue(kieuThue);
+    }
 
-        switch (type) {
-            case 1:
-                System.out.println("Nhập số lượng ngày thuê");
-                int day = Integer.parseInt(in.nextLine());
-                total = day;
-                break;
-            case 2:
-                System.out.println("nhập số lượng tháng thuê");
-                int month = Integer.parseInt(in.nextLine());
-                total = month * 30;
-                break;
-            case 3:
-                System.out.println("nhập số lượng năm thuê");
-                int year = Integer.parseInt(in.nextLine());
-                total = year * 365;
-                break;
-        }
-        return total;
+    @Override
+    public void setSquare(double square) {
+        super.setSquare(square);
+    }
 
+    @Override
+    public int getKieuThue() {
+        return super.getKieuThue();
+    }
+
+    @Override
+    public int getPeople() {
+        return super.getPeople();
+    }
+
+    @Override
+    public void setPeople(int people) {
+        super.setPeople(people);
+    }
+
+    @Override
+    public String getTendichvu() {
+        return super.getTendichvu();
+    }
+
+    @Override
+    public void setTendichvu(String tendichvu) {
+        super.setTendichvu(tendichvu);
+    }
+
+    public String getFreeservice() {
+        return freeservice;
+    }
+
+    public void setFreeservice(String freeservice) {
+        this.freeservice = freeservice;
     }
 }

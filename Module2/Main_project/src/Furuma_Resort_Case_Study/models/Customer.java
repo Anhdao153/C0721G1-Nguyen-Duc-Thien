@@ -3,16 +3,30 @@ package Furuma_Resort_Case_Study.models;
 import java.util.Scanner;
 
 public class Customer extends Person {
-    private String name;
-    private int age;
-    private String address;
-    private int phone;
-    private int CMND;
-    private String gender;
-    private String email;
     private int customerID;
     public Customer(){}
- Scanner in=new Scanner(System.in);
+    public Customer( String name, int age, String address, int phone, int CMND, String gender, String email,int customerID,long birthday) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.phone = phone;
+        this.CMND = CMND;
+        this.gender = gender;
+        this.email = email;
+        this.customerID=customerID;
+        this.birthday = birthday;
+    }
+
+    @Override
+    public long getBirthday() {
+        return super.getBirthday();
+    }
+
+    @Override
+    public void setBirthday(long birthday) {
+        super.setBirthday(birthday);
+    }
+    @Override
     public String getName() {
         return name;
     }
@@ -24,134 +38,56 @@ public class Customer extends Person {
     public void setCustomerID(int customerID) {
         this.customerID = customerID;
     }
-
+    @Override
     public String getEmail() {
         return email;
     }
-
+    @Override
     public void setEmail(String email) {
         this.email = email;
     }
-
+    @Override
     public void setName(String name) {
         this.name = name;
     }
-
+    @Override
     public int getAge() {
         return age;
     }
-
+    @Override
     public void setAge(int age) {
         this.age = age;
     }
-
+    @Override
     public String getAddress() {
         return address;
     }
-
+    @Override
     public void setAddress(String address) {
         this.address = address;
     }
-
+    @Override
     public int getCMND() {
         return CMND;
     }
-
+    @Override
     public void setCMND(int CMND) {
         this.CMND = CMND;
     }
-
+    @Override
     public int getPhone() {
         return phone;
     }
-
+    @Override
     public void setPhone(int phone) {
         this.phone = phone;
     }
-
+    @Override
     public String getGender() {
         return gender;
     }
-
+    @Override
     public void setGender(String gender) {
         this.gender = gender;
-    }
-    public int CustomerID(){
-        customerID =Integer.parseInt(in.nextLine());
-        setCustomerID(customerID);
-        return getCustomerID();
-    }
-    public String TypeCustomer(){
-        int Type=Integer.parseInt(in.nextLine());
-        String typecustomer="null";
-        switch (Type){
-            case 1:
-                System.out.println("Khách hạng Diamound");
-                typecustomer="Khách hạng Diamound";
-                break;
-            case 2:
-                System.out.println("Khách hạng Plantinium");
-                typecustomer="Khách hạng Plantinium";
-                break;
-            case 3:
-                System.out.println("Khách hạng Gold");
-                typecustomer="Khách hạng Gold";
-                break;
-            case 4:
-                System.out.println("Khách hạng Silver");
-                typecustomer="Khách hạng Silver";
-                break;
-            case 5:
-                System.out.println("Khách hạng Member");
-                typecustomer="Khách hạng Member";
-                break;
-        }
-        return typecustomer;
-    }
-    @Override
-    public String Name() {
-        name =in.nextLine();
-        setName(name);
-        return getName();
-    }
-
-    @Override
-    public int Age() {
-        age =Integer.parseInt(in.nextLine());
-        setAge(age);
-        return getAge();
-    }
-
-    @Override
-    public String Address() {
-        address =in.nextLine();
-        setAddress(address);
-        return getAddress();
-    }
-
-    @Override
-    public int Phone() {
-        phone =Integer.parseInt(in.nextLine());
-        setPhone(phone);
-        return getPhone();
-    }
-
-    @Override
-    public int CMND() {
-        CMND=Integer.parseInt(in.nextLine());
-        setCMND(CMND);
-        return getCMND();
-    }
-
-    @Override
-    public String Gender() {
-        gender =in.nextLine();
-        setGender(gender);
-        return getGender();
-    }
-
-    @Override
-    public String Email() {
-        return null;
     }
 }

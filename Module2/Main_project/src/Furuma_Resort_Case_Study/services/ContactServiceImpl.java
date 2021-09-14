@@ -11,10 +11,6 @@ public class ContactServiceImpl implements ContactService{
 
     }
 
-    public String add() {
-        return null;
-    }
-
     @Override
     public void delete() {
 

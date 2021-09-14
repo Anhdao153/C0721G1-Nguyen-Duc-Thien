@@ -12,10 +12,6 @@ public class FacilityServiceImpl implements FacilityService {
 
     }
 
-        public String add() {
-        return null;
-    }
-
     @Override
     public void delete() {
 

@@ -12,10 +12,6 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
 
-    public String add() {
-        return null;
-    }
-
     @Override
     public void delete() {
 

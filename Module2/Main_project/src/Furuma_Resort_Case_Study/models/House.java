@@ -1,40 +1,28 @@
 package Furuma_Resort_Case_Study.models;
 
-import java.util.Scanner;
-
 public class House extends Facility {
+    private int sotang;
+    private String tieuchuanphong;
+
     public House() {
     }
 
-    Scanner in = new Scanner(System.in);
-    private int total;
-    private int sotang;
-    private double square;
-    private int people;
-    private double cost;
-
-    public double getSquare() {
-        return square;
-    }
-
-    public void setSquare(double square) {
+    public House(double square, int sotang, int people, int kieuThue, double cost, String tendichvu, String tieuchuanphong) {
         this.square = square;
-    }
-
-    public double getCost() {
-        return cost;
-    }
-
-    public void setCost(double cost) {
+        this.sotang = sotang;
+        this.people = people;
+        this.kieuThue = kieuThue;
         this.cost = cost;
+        this.tieuchuanphong = tieuchuanphong;
+        this.tendichvu = tendichvu;
     }
 
-    public int getPeople() {
-        return people;
+    public void setTieuchuanphong(String tieuchuanphong) {
+        this.tieuchuanphong = tieuchuanphong;
     }
 
-    public void setPeople(int People) {
-        this.people = People;
+    public String getTieuchuanphong() {
+        return tieuchuanphong;
     }
 
     public int getSotang() {
@@ -45,64 +33,66 @@ public class House extends Facility {
         this.sotang = sotang;
     }
 
-    public int SoTang() {
-        System.out.println("Nhập số tầng mà bạn muốn thuê");
-        int sotang = Integer.parseInt(in.nextLine());
-        setSotang(sotang);
-        return getSotang();
-    }
-
-
-    public String TenDichVu() {
-        return "Phòng hạng thương gia House";
+    @Override
+    public double getCost() {
+        return super.getCost();
     }
 
     @Override
-    public double DienTichPhong() {
-        System.out.println("Nhập diện tích căn phòng muốn thuê");
-        double Square = Double.parseDouble(in.nextLine());
-        setSquare(Square);
-        return getSquare();
+    public void setCost(double cost) {
+        super.setCost(cost);
     }
 
     @Override
-    public double ChiPhiThue() {
-        System.out.println("Tổng chi phí thuê của quý khách là: ");
-        double Cost = getPeople() * 500000 + getSquare() * 50000 + total * 500000 + getSotang() * 500000;
-        setCost(Cost);
-        return getCost();
+    public double getSquare() {
+        return super.getSquare();
     }
 
     @Override
-    public int SoNguoiToida() {
-        System.out.println("Tổng số người thuê 1 căn phòng");
-        people = Integer.parseInt(in.nextLine());
-        setPeople(people);
-        return getPeople();
+    public void setKieuThue(int kieuThue) {
+        super.setKieuThue(kieuThue);
     }
 
     @Override
-    public int KieuThue() {
-        System.out.println("Chọn kiểu thuê \n1. Ngày\n2. Tháng\n3.Năm");
-        int type = Integer.parseInt(in.nextLine());
+    public void setSquare(double square) {
+        super.setSquare(square);
+    }
 
-        switch (type) {
-            case 1:
-                System.out.println("Nhập số lượng ngày thuê");
-                int day = Integer.parseInt(in.nextLine());
-                total = day;
-                break;
-            case 2:
-                System.out.println("nhập số lượng tháng thuê");
-                int month = Integer.parseInt(in.nextLine());
-                total = month * 30;
-                break;
-            case 3:
-                System.out.println("nhập số lượng năm thuê");
-                int year = Integer.parseInt(in.nextLine());
-                total = year * 365;
-                break;
-        }
-        return total;
+    @Override
+    public int getKieuThue() {
+        return super.getKieuThue();
+    }
+
+    @Override
+    public int getPeople() {
+        return super.getPeople();
+    }
+
+    @Override
+    public void setPeople(int people) {
+        super.setPeople(people);
+    }
+
+    @Override
+    public String getTendichvu() {
+        return super.getTendichvu();
+    }
+
+    @Override
+    public void setTendichvu(String tendichvu) {
+        super.setTendichvu(tendichvu);
+    }
+
+    @Override
+    public String toString() {
+        return "House{" +
+                "sotang=" + sotang +
+                ", tieuchuanphong='" + tieuchuanphong + '\'' +
+                ", square=" + square +
+                ", people=" + people +
+                ", kieuThue=" + kieuThue +
+                ", cost=" + cost +
+                ", tendichvu='" + tendichvu + '\'' +
+                '}';
     }
 }
