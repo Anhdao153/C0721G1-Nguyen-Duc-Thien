@@ -5,6 +5,12 @@ import java.util.Scanner;
 public class BookingServiceImlp implements BookingService {
     private int total;
     Scanner in = new Scanner(System.in);
+
+    @Override
+    public void show() {
+
+    }
+
     @Override
     public String edit() {
         return null;
@@ -19,15 +25,7 @@ public class BookingServiceImlp implements BookingService {
 
     }
 
-    @Override
-    public void freefood() {
 
-    }
-
-    @Override
-    public void freebeverage() {
-
-    }
     public int KieuThue() {
         System.out.println("Chọn kiểu thuê \n1. Ngày\n2. Tháng\n3.Năm");
         int type = Integer.parseInt(in.nextLine());

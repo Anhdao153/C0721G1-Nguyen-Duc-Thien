@@ -1,13 +1,16 @@
 package Furuma_Resort_Case_Study.controllers;
 
+import Furuma_Resort_Case_Study.services.CustomerServiceImpl;
 import Furuma_Resort_Case_Study.services.EmployeeServiceImpl;
+import Furuma_Resort_Case_Study.services.FacilityServiceImpl;
 
 import java.util.Scanner;
 
 public class FuramaController {
     Scanner in = new Scanner(System.in);
     EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
-
+    CustomerServiceImpl customerService= new CustomerServiceImpl();
+    FacilityServiceImpl facilityService=new FacilityServiceImpl();
     public void displayMainMenu() {
         System.out.println("1. Employee Management");
         System.out.println("2. Customer Management");
@@ -20,19 +23,13 @@ public class FuramaController {
             choice = Integer.parseInt(in.nextLine());
             switch (choice) {
                 case 1:
-                    employeeService.display();
+                    employeeService.displayEmployeeMenu();
                     break;
                 case 2:
-                    System.out.println("1.Display list customers");
-                    System.out.println("2.Add new customer");
-                    System.out.println("3.Edit customer");
-                    System.out.println("4.Return main menu");
+                    customerService.displayCustomerMenu();
                     break;
                 case 3:
-                    System.out.println("1 Display list facility");
-                    System.out.println("2 Add new facility");
-                    System.out.println("3 Display list facility maintenance");
-                    System.out.println("4 Return main menu");
+                    facilityService.displayFacilityMenu();
                     break;
                 case 4:
                     System.out.println("1.Add new booking");
@@ -57,13 +54,12 @@ public class FuramaController {
     public static int selectionmenu() {
         Scanner sc = new Scanner(System.in);
         int n;
-        System.out.print("nhap n = ");
+        System.out.print("nhập chức năng = ");
         n = sc.nextInt();
-        while(n<=0 || n > 4){
-            System.out.print("nhap lai:");
+        while(n<=0 || n > 5){
+            System.out.print("nhập lại:");
             n = sc.nextInt();
         }
-
         return n;
     }
 

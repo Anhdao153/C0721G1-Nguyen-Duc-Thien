@@ -22,16 +22,6 @@ public class Villa extends Facility {
         this.tendichvu = tendichvu;
     }
 
-    @Override
-    public void setTendichvu(String tendichvu) {
-        super.setTendichvu(tendichvu);
-    }
-
-    @Override
-    public String getTendichvu() {
-        return super.getTendichvu();
-    }
-
     public String getTieuchuanphong() {
         return tieuchuanphong;
     }
@@ -40,15 +30,6 @@ public class Villa extends Facility {
         this.tieuchuanphong = tieuchuanphong;
     }
 
-    @Override
-    public void setPeople(int people) {
-        super.setPeople(people);
-    }
-
-    @Override
-    public int getPeople() {
-        return super.getPeople();
-    }
 
     public void setSotang(int sotang) {
         this.sotang = sotang;
@@ -56,36 +37,6 @@ public class Villa extends Facility {
 
     public int getSotang() {
         return sotang;
-    }
-
-    @Override
-    public int getKieuThue() {
-        return super.getKieuThue();
-    }
-
-    @Override
-    public void setSquare(double square) {
-        super.setSquare(square);
-    }
-
-    @Override
-    public void setKieuThue(int kieuThue) {
-        super.setKieuThue(kieuThue);
-    }
-
-    @Override
-    public double getSquare() {
-        return super.getSquare();
-    }
-
-    @Override
-    public void setCost(double cost) {
-        super.setCost(cost);
-    }
-
-    @Override
-    public double getCost() {
-        return super.getCost();
     }
 
     public double getSquarehoboi() {

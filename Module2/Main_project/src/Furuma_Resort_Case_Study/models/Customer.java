@@ -16,21 +16,6 @@ public class Customer extends Person {
         this.customerID=customerID;
         this.birthday = birthday;
     }
-
-    @Override
-    public long getBirthday() {
-        return super.getBirthday();
-    }
-
-    @Override
-    public void setBirthday(long birthday) {
-        super.setBirthday(birthday);
-    }
-    @Override
-    public String getName() {
-        return name;
-    }
-
     public int getCustomerID() {
         return customerID;
     }
@@ -39,55 +24,22 @@ public class Customer extends Person {
         this.customerID = customerID;
     }
     @Override
-    public String getEmail() {
-        return email;
+    public String toString() {
+        return "Customer{" +
+                "customerID=" + customerID +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", address='" + address + '\'' +
+                ", phone=" + phone +
+                ", CMND=" + CMND +
+                ", gender='" + gender + '\'' +
+                ", email='" + email + '\'' +
+                ", birthday=" + birthday +
+                '}';
     }
-    @Override
-    public void setEmail(String email) {
-        this.email = email;
-    }
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
-    @Override
-    public int getAge() {
-        return age;
-    }
-    @Override
-    public void setAge(int age) {
-        this.age = age;
-    }
-    @Override
-    public String getAddress() {
-        return address;
-    }
-    @Override
-    public void setAddress(String address) {
-        this.address = address;
-    }
-    @Override
-    public int getCMND() {
-        return CMND;
-    }
-    @Override
-    public void setCMND(int CMND) {
-        this.CMND = CMND;
-    }
-    @Override
-    public int getPhone() {
-        return phone;
-    }
-    @Override
-    public void setPhone(int phone) {
-        this.phone = phone;
-    }
-    @Override
-    public String getGender() {
-        return gender;
-    }
-    @Override
-    public void setGender(String gender) {
-        this.gender = gender;
+    public String getStringToWrite(){
+        return this.name+","+this.age+","+this.address+","+
+                this.phone+","+this.CMND+","+this.gender+","+this.email+
+                ","+this.customerID+","+ this.birthday;
     }
 }

@@ -14,28 +14,21 @@ public class ReadCSVFile {
 
     public static void main(String[] args) {
         String path="";
-        Scanner scanner=new Scanner(System.in);
+       Scanner scanner=new Scanner(System.in);
         path=scanner.nextLine();
         ReadFile(path);
     }
     public static void ReadFile(String path){
-//        Country country1=new Country("Us","United State");
-//        Country country2=new Country("VN","Việt Nam");
-//        Country country3=new Country("CN","China");
-//        Country country4=new Country("Kr","Korean");
-//        List<Country> countries=new ArrayList<>();
-//        countries.add(country1);
-//        countries.add(country2);
-//        countries.add(country3);
-//        countries.add(country4);
         try {
             File link = new File(path);
             if (!link.exists()){
                 throw new FileNotFoundException();
             }
             BufferedReader br=new BufferedReader(new FileReader(link));
-            String line=br.readLine();
-            while (line!=null){
+           String line="";
+
+            while ( (line=br.readLine())!=null){
+
                 printContry(parseCsvLine(line));
             }
             br.close();

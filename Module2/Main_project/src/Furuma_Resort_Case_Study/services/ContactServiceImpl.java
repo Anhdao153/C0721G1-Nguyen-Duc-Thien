@@ -2,6 +2,11 @@ package Furuma_Resort_Case_Study.services;
 
 public class ContactServiceImpl implements ContactService{
     @Override
+    public void show() {
+
+    }
+
+    @Override
     public String edit() {
         return null;
     }
@@ -16,13 +21,4 @@ public class ContactServiceImpl implements ContactService{
 
     }
 
-    @Override
-    public void freefood() {
-
-    }
-
-    @Override
-    public void freebeverage() {
-
-    }
 }

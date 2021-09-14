@@ -12,7 +12,8 @@ public class Employee extends Person {
     public Employee() {
     }
 
-    public Employee(int staffId, String name, int age, String address, int phone, int CMND, String gender, String email, double salary, long birthday, String position, String educateAndexperience) {
+    public Employee(int staffId, String name, int age, String address, int phone, int CMND, String gender,
+                    String email, double salary, long birthday, String position, String educateAndexperience) {
         this.birthday = birthday;
         this.salary = salary;
         this.staffId = staffId;
@@ -27,28 +28,12 @@ public class Employee extends Person {
         this.email = email;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getPosition() {
         return position;
     }
 
     public void setPosition(String position) {
         this.position = position;
-    }
-    @Override
-    public long getBirthday() {
-        return birthday;
-    }
-    @Override
-    public void setBirthday(long birthday) {
-        this.birthday = birthday;
     }
 
     public String getEducateAndexperience() {
@@ -74,72 +59,11 @@ public class Employee extends Person {
     public void setStaffId(int staffId) {
         this.staffId = staffId;
     }
-
-    @Override
-    public String getGender() {
-        return super.getGender();
-    }
-
-    @Override
-    public void setGender(String gender) {
-        super.setGender(gender);
-    }
-
-    @Override
-    public int getAge() {
-        return super.getAge();
-    }
-
-    @Override
-    public int getCMND() {
-        return super.getCMND();
-    }
-
-    @Override
-    public int getPhone() {
-        return super.getPhone();
-    }
-
-    @Override
-    public String getAddress() {
-        return super.getAddress();
-    }
-
-    @Override
-    public String getName() {
-        return super.getName();
-    }
-
-    @Override
-    public void setAddress(String address) {
-        super.setAddress(address);
-    }
-
-    @Override
-    public void setAge(int age) {
-        super.setAge(age);
-    }
-
-    @Override
-    public void setCMND(int CMND) {
-        super.setCMND(CMND);
-    }
-
-    @Override
-    public void setName(String name) {
-        super.setName(name);
-    }
-
-    @Override
-    public void setPhone(int phone) {
-        super.setPhone(phone);
-    }
     @Override
     public String toString() {
         return "Employee{" +
                 "staffId=" + staffId +
                 ", salary=" + salary +
-                ", birthday=" + birthday +
                 ", position='" + position + '\'' +
                 ", educateAndexperience='" + educateAndexperience + '\'' +
                 ", name='" + name + '\'' +
@@ -149,6 +73,13 @@ public class Employee extends Person {
                 ", CMND=" + CMND +
                 ", gender='" + gender + '\'' +
                 ", email='" + email + '\'' +
+                ", birthday=" + birthday +
                 '}';
+    }
+
+    public String getStringToWrite(){
+        return this.staffId+","+this.name+","+this.age+","+this.address+","+
+                this.phone+","+this.CMND+","+this.gender+","+this.email+","+this.salary+","+
+                this.birthday+","+position+","+this.educateAndexperience;
     }
 }
