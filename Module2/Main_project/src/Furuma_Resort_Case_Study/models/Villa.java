@@ -60,4 +60,7 @@ public class Villa extends Facility {
                 ", tendichvu='" + tendichvu + '\'' +
                 '}';
     }
+    public String getStringToWrite(){
+        return this.square+","+this.squarehoboi+","+this.sotang+","+this.tieuchuanphong+","+this.tendichvu+this.cost+","+this.kieuThue+","+this.people;
+    }
 }

@@ -32,8 +32,6 @@ public class House extends Facility {
     public void setSotang(int sotang) {
         this.sotang = sotang;
     }
-
-
     @Override
     public String toString() {
         return "House{" +
@@ -45,5 +43,8 @@ public class House extends Facility {
                 ", cost=" + cost +
                 ", tendichvu='" + tendichvu + '\'' +
                 '}';
+    }
+    public String getStringToWrite(){
+        return this.square+","+this.sotang+","+this.people+","+this.kieuThue+","+this.cost+","+this.tendichvu+","+this.tieuchuanphong;
     }
 }

@@ -1,5 +1,6 @@
 package Furuma_Resort_Case_Study.controllers;
 
+import Furuma_Resort_Case_Study.services.BookingServiceImlp;
 import Furuma_Resort_Case_Study.services.CustomerServiceImpl;
 import Furuma_Resort_Case_Study.services.EmployeeServiceImpl;
 import Furuma_Resort_Case_Study.services.FacilityServiceImpl;
@@ -11,6 +12,7 @@ public class FuramaController {
     EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
     CustomerServiceImpl customerService= new CustomerServiceImpl();
     FacilityServiceImpl facilityService=new FacilityServiceImpl();
+    BookingServiceImlp bookingServiceImlp=new BookingServiceImlp();
     public void displayMainMenu() {
         System.out.println("1. Employee Management");
         System.out.println("2. Customer Management");
@@ -32,12 +34,7 @@ public class FuramaController {
                     facilityService.displayFacilityMenu();
                     break;
                 case 4:
-                    System.out.println("1.Add new booking");
-                    System.out.println("2.Display list booking");
-                    System.out.println("3.Create new constracts");
-                    System.out.println("4.Display list contracts");
-                    System.out.println("5.Edit contracts");
-                    System.out.println("6.Return main menu");
+                    bookingServiceImlp.displayBookingMenu();
                     break;
                 case 5:
                     System.out.println("1.Display list customers use service");
@@ -56,7 +53,7 @@ public class FuramaController {
         int n;
         System.out.print("nhập chức năng = ");
         n = sc.nextInt();
-        while(n<=0 || n > 5){
+        while(n<=0 || n > 6){
             System.out.print("nhập lại:");
             n = sc.nextInt();
         }
