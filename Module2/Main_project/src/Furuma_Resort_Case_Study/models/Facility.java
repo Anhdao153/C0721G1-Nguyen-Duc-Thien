@@ -7,6 +7,7 @@ public abstract class Facility {
     public int kieuThue;
     public double cost;
     public String tendichvu;
+
     public double getCost() {
         return cost;
     }
@@ -31,12 +32,13 @@ public abstract class Facility {
     public void setSquare(double square) {
         this.square = square;
     }
-
     public String getTendichvu() {
         return tendichvu;
     }
-
     public void setTendichvu(String tendichvu) {
         this.tendichvu = tendichvu;
+    }
+    public String getStringToWrite(){
+        return this.square+","+this.people+","+this.kieuThue+","+this.cost+","+this.tendichvu;
     }
 }

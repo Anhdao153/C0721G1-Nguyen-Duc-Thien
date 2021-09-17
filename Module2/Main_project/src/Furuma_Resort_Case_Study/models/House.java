@@ -45,6 +45,6 @@ public class House extends Facility {
                 '}';
     }
     public String getStringToWrite(){
-        return this.square+","+this.sotang+","+this.people+","+this.kieuThue+","+this.cost+","+this.tendichvu+","+this.tieuchuanphong;
+        return super.getStringToWrite()+","+this.sotang+","+this.tieuchuanphong;
     }
 }

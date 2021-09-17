@@ -61,6 +61,6 @@ public class Villa extends Facility {
                 '}';
     }
     public String getStringToWrite(){
-        return this.square+","+this.squarehoboi+","+this.sotang+","+this.tieuchuanphong+","+this.tendichvu+this.cost+","+this.kieuThue+","+this.people;
+        return super.getStringToWrite()+","+this.squarehoboi+","+this.sotang+","+this.tieuchuanphong;
     }
 }

@@ -32,8 +32,8 @@ public class Room extends Facility {
                 ", tendichvu='" + tendichvu + '\'' +
                 '}';
     }
-
+    @Override
     public String getStringToWrite(){
-        return this.square+","+this.people+","+this.kieuThue+","+this.cost+","+this.tendichvu;
+        return super.getStringToWrite();
     }
 }

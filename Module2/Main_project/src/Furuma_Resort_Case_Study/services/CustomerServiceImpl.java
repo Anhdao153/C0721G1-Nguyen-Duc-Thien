@@ -101,7 +101,7 @@ public class CustomerServiceImpl implements CustomerService{
         System.out.println("Enter your email " + ((isCreated) ? customer.email : " ") + ": ");
         customer.email = sc.nextLine();
 
-        System.out.println("Enter your salary " + ((isCreated) ? customer.getCustomerID() : " ") + ": ");
+        System.out.println("Enter Customer ID " + ((isCreated) ? customer.getCustomerID() : " ") + ": ");
         customer.setCustomerID(Integer.parseInt(sc.nextLine()));
 
         System.out.println("Enter your birth year " + ((isCreated) ? customer.birthday : " ") + ": ");
