@@ -1,4 +1,3 @@
-create database quan_ly_ban_hang;
 use quan_ly_ban_hang;
 create table Customer(
 cid int auto_increment  primary key,
@@ -13,8 +12,8 @@ ototalprice float not null check (ototalprice>0),
 foreign key (cid) references customer (cid)
 );
 create table orderdetail(
-oid int auto_increment,
-pid int auto_increment,
+oid int,
+pid int,
 odqty int,
 primary key(oid,pid),
 foreign key (oid) references orderr (oid),
