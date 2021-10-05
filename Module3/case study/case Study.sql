@@ -256,10 +256,12 @@ group by khach_hang.id_khach_hang;
  from dich_vu
  join loai_dich_vu on dich_vu.id_loai_dich_vu=loai_dich_vu.id_loai_dich_vu
  join hop_dong on hop_dong.id_dich_vu=dich_vu.id_dich_vu
- where year(ngay_lam_hop_dong=2018) 
+ where year(ngay_lam_hop_dong)=2018
  and year(ngay_lam_hop_dong)
-	not in (select year(ngay_lam_hop_dong) from hop_dong
-			where year(ngay_lam_hop_dong=2019));
+		not in (2019);
+       --  (select year(ngay_lam_hop_dong) 
+-- 			from hop_dong
+-- 			where year(ngay_lam_hop_dong)=2019);
 
        -- task 8
 	use quan_ly_furama;   
@@ -279,7 +281,7 @@ group by khach_hang.id_khach_hang;
     from khach_hang;
     
     -- task 9
-    use quan_ly_furama;   
+    use quan_ly_furama;
     select month(hop_dong.ngay_lam_hop_dong) as thang,
     hop_dong.tong_tien, khach_hang.id_khach_hang,count(khach_hang.id_khach_hang) as so_luong_khach_hang
     from hop_dong
@@ -329,8 +331,8 @@ select dich_vu_di_kem.*, sum(so_luong) as tong_so_luong, count(dich_vu_di_kem.id
 from  hop_dong_chi_tiet
 join dich_vu_di_kem on hop_dong_chi_tiet.id_dich_vu_di_kem = dich_vu_di_kem.id_dich_vu_di_kem
 group by id_dich_vu_di_kem;
--- task 14
 
+-- task 14
 select dich_vu_di_kem.*, sum(so_luong) as so_luong, count(dich_vu_di_kem.id_dich_vu_di_kem) as tong_lan_dat
 from  hop_dong_chi_tiet
 join dich_vu_di_kem on hop_dong_chi_tiet.id_dich_vu_di_kem = dich_vu_di_kem.id_dich_vu_di_kem
@@ -382,10 +384,9 @@ select id_nhan_vien, ho_ten, email, sdt, ngay_sinh, dia_chi
 from nhan_vien
 union all
 select id_khach_hang, ho_ten, email, sdt, ngay_sinh, dia_chi
-from khach_hang
+from khach_hang;
 
 -- task 21
-
 create view v_nhan_vien as
 select *
 from nhan_vien
@@ -410,9 +411,9 @@ set  dia_chi='Liên Chiểu';
 
 -- task 24 
 
-CREATE UNIQUE INDEX IX_SoDT_DiaChi 
-ON khach_hang(sdt, dia_chi);
+-- CREATE UNIQUE INDEX IX_SoDT_DiaChi 
+-- ON khach_hang(sdt, dia_chi);
 
-explain select * from khach_hang where sdt = '123456789' and dia_chi ='da nang';
+-- explain select * from khach_hang where sdt = '123456789' and dia_chi ='da nang';
 
 
